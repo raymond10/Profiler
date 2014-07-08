@@ -1,0 +1,64 @@
+<div class = "block" style = "width:500px;">
+  <div class = "boxTitre titreBlock" style = "width:99%;">
+    <span style = "margin-left:20px">Question secr&egrave;te</span>
+  </div>
+  <div class = "subBox corpsBlock" style="text-align:center;padding-top:10px;">
+    <p style = "background-color:#F0F0F0;font-style:italic;border:1px dotted;margin:0 auto;width:400px;">Si vous avez perdu votre mot de passe ?<br> La question secr&egrave;te vous permetra de le reinitialiser.</p>
+    <br />
+    <webobject name = "AucQuestionZone">
+      <webobject name = "ScriptClose" />
+      <webobject name = "HaveQuestion">
+        La question que vous avez choisie est :
+        <p style = "background-color:white;border:1px dotted;margin:0 auto;">
+        <b><webobject name = "Question" /></b>
+        <br />
+        <webobject name = "HaveResponse">
+          <i>Vous avez renseign&eacute; la r&eacute;ponse</i>
+        </webobject>
+        <webobject name = "Else">
+          <i>Vous n'avez pas encore renseign&eacute; de r&eacute;ponse</i>
+        </webobject>
+        </p>
+      </webobject>
+      <webobject name = "Else">
+        <i>Vous n'avez pas encore choisie de question</i>
+      </webobject>
+      <br />
+      <webobject name = "CanChangePwd">
+        <div style="text-align:left;"><webobject name = "AulAjouter" /></div>
+        <webobject name = "AucZoneEdition">
+          <webobject name = "AmdEditQuestion">
+            <webobject name = "AucQuestionReponse">
+              <webobject name = "ErreurContainer"> <webobject name = "MessageUtil" /> </webobject>
+              <webobject name = "frm">
+                <table width = "100%">
+                  <tr>
+                    <th valign = "top" style = "text-align:right;">Question :</th>
+                    <td>
+                      <webobject name = "AofQuestion"><webobject name = "PobQuestion" /></webobject>
+                      <webobject name = "AucPersoQuest">
+                        <webobject name = "IsPersoQuest">
+                          Question personnelle :<br />
+                          <webobject name = "PersoQuest" />
+                        </webobject>
+                      </webobject>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th style = "text-align:right;">R&eacute;ponse :</th>
+                    <td><webobject name = "Reponse" /></td>
+                  </tr>
+                  <tr>
+                    <td colspan = "2" style = "text-align:right;padding-right:5px;">
+                      <webobject name = "AsbValide" />&nbsp;&nbsp;<webobject name = "AulCancel" />
+                    </td>
+                  </tr>
+                </table>
+              </webobject>
+            </webobject>
+          </webobject>
+        </webobject>
+      </webobject>
+    </webobject>
+  </div>
+</div>

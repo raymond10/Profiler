@@ -1,0 +1,32 @@
+
+Adresses : PersonneAdressesUI {
+  editingContext = getEc;
+  personne = editedPersonne;
+//  isReadOnly = isNotEdited;
+  isReadOnly = isAdressReadOnlyEnabled;
+  selectedRepartPersonneAdresse = selectedRepartPersonneAdresse;
+  isEditing = cmpEditing;
+  utilisateurPersId = ^utilisateurPersId;
+//  onAdresseDidChange = save;
+}
+
+frmAdrs : ERXOptionalForm {
+  multipleSubmit = true;
+}
+
+AucAdrs : AjaxUpdateContainer {
+  id = aucAdrsId;
+}
+
+AucTriggerEditAdrs : AjaxUpdateContainer {
+	id = aucTriggerAdrsId;
+}
+
+AutEditAdrs : AjaxUpdateTrigger {
+	updateContainerIDs = lstEditZones;
+}
+
+
+AbiAdrs : AjaxBusyIndicator {
+ 
+}

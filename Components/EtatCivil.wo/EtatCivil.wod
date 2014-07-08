@@ -1,0 +1,160 @@
+
+AlternateColor: WOString {
+	value = backgroundColorForRow;
+}
+
+Prenom: WOString {
+	value = detailsIndividu.prenom;
+}
+
+Prenom2: WOString {
+	value = detailsIndividu.prenom2;
+}
+NomUsuel: WOString {
+	value = editedPersonne.persLibelle;
+}
+
+DateNaissance : WOString {
+	value = detailsIndividu.dNaissance;
+	dateformat = "%d %B %Y";
+}
+VilleNaissance : WOString {
+	value = detailsIndividu.villeDeNaissance;
+}
+Situation: WOString {
+	value = detailsIndividu.toSituationFamiliale.lSituationFamille;
+}
+
+//Numen: WOString {
+//	value = detailsIndividu;
+//}
+
+//hasEnfant: ERXNonZeroConditional {
+//	condition = lstEnfants.count;
+//}
+
+hasEnfant: WOConditional {
+	condition = hasEnfants;
+}
+
+ElseEnfant : WOConditional {
+	condition = hasEnfants;
+	negate = true;
+}
+
+//Else : ERXElse {
+//Else : ERXNonZeroConditional {
+//	condition = lstEnfants.count;
+//	negate = true;
+//}
+Enfants : WORepetition {
+	list = lstEnfants;
+	item = enfant;
+}
+NomEnfant : WOString {
+	value = enfant.prenom;
+}
+PrenomEnfant : WOString {
+	value = enfant.nom;
+}
+SexeEnfant : WOString {
+	value = enfant.sexe;
+}
+NaissanceEnfant : WOString {
+	value = enfant.dNaissance;
+	dateformat = getTimestampFormatter;
+}
+
+//hasRibs: ERXNonZeroConditional {
+//	condition = lstRibs.count;
+//}
+
+hasRibs: WOConditional {
+	condition = hasRibs;
+}
+
+ElseRibs : WOConditional {
+	condition = hasRibs;
+	negate = true;
+}
+
+Ribs : WORepetition {
+	list = lstRibs;
+	item = rib;
+}
+RibBanque : WOString {
+	value = rib.cBanque;
+}
+RibGuichet : WOString {
+	value = rib.cGuichet;
+}
+RibCompte: WOString {
+	value = rib.noCompte;
+}
+RibCle: WOString {
+	value = rib.cleRib;
+}
+Iban: WOString {
+	value = rib.iban;
+}
+Bic: WOString {
+	value = rib.bic;
+}
+
+hasDiplomes: WOConditional {
+	condition = hasDiplomes;
+}
+
+ElseDiplome : WOConditional {
+	condition = hasDiplomes;
+	negate = true;
+}
+
+Diplomes: WORepetition {
+	list = lstDiplomes;
+	item = diplome;
+}
+Diplome: WOString {
+	value = diplome.toDiplome.llDiplome;
+}
+hasAnneeDiplome: WOConditional{
+	condition = diplome.dDiplome;
+}
+AnneeDiplome: WOString {
+	value = diplome.anneeDiplome;
+}
+LieuDiplome: WOString {
+	value = diplome.lieuDiplome;
+}
+TitulaireDiplome: WOString {
+	value = diplome.toTitulaireDiplome.lTitulaireDiplome;
+}
+
+hasBac : WOConditional {
+	condition = hasBac;
+}
+
+Bac: WOString {
+	value = etudiant.toBac.bacLibelle;// bacCode;
+}
+
+BacAnn: WOString {
+	value = etudiant.etudAnbac;
+}
+
+BacLieu: WOString {
+	value = etudiant.toRneCodeBac.cRne;
+}
+
+BacDpt: WOString {
+	value = etudiant.toDepartementEtabBac.cDepartement;
+}
+
+NomPat: WOString {
+	value = editedPersonne.persNomptr;
+}
+
+Civilite: WOString {
+	value = detailsIndividu.toCivilite.cCivilite;
+}
+

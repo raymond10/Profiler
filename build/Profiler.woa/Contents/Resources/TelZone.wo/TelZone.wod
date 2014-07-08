@@ -1,0 +1,26 @@
+
+Telephones : PersonneTelephoneUI {
+  editingContext = getEc;
+  personne = editedPersonne;
+//  isReadOnly = isNotEdited;
+  isReadOnly = isTelephoneReadOnlyEnabled;
+  defaultTypeTel = "PRF";
+  isCompactView = false;
+  utilisateurPersId = ^utilisateurPersId;
+  qualifierForTypeTel = qualTypeTel;
+  wantReset = session.isWantReset;
+  
+}
+
+
+
+frmTel : ERXOptionalForm {
+  multipleSubmit = true;
+  id = "test";
+}
+
+AucTel : AjaxUpdateContainer {
+  id = aucTelId;
+}
+
+

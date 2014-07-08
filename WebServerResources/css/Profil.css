@@ -1,0 +1,453 @@
+/* (c) Cocktail                                           */
+/**********************************************************/
+/* Feuille de style de l'application profiler             */
+/**********************************************************/
+
+/*
+Config appli
+*/
+
+root { 
+    display: block;
+}
+
+h1 {
+    font-size: large;
+    font-weight: bold;
+/*    text-align: center;*/
+}
+h2 {
+    font-size: large;
+    font-weight: bold;
+}
+table th {  
+  font-weight:bold;
+  text-align:center;
+}
+
+/*
+ LE "CORPS" DE LA PAGE
+*/
+
+#centre {
+	padding: 0;
+	margin: 2em auto;
+	width: 67em;
+}
+
+#main {
+    border : 0;    
+    width : 100%;
+    /*text-align: center;*/
+}
+
+.tableWithBorder {
+  border:1px solid #A3A3A3;
+}
+
+.tableWithBorder thead tr th {
+  background-color:#FFEED5;  
+  border-style:solid;
+  border-bottom-color: #A3A3A3; 
+  border-top:medium none;
+  border-left:1px solid #DBDBDB;
+  border-right:1px solid #A3A3A3;
+}
+
+.tableWithBorder tbody tr td {
+  border-left:1px solid #DBDBDB;
+  border-right:1px solid #A3A3A3;
+}
+
+.editedFieldSet {    
+    border : 2px solid #696996 !important;
+    background : #FFF9F0 !important;
+}
+
+.editedLegend {    
+    border : 2px solid #696996 !important;
+    background : #FFDFAE !important;
+}
+
+
+#main a.bulle {
+    position: relative;
+    color: #218CA5;
+    text-decoration : none;
+}
+
+#main a.bulle span {
+    display: none;
+}
+
+#main a.bulle:hover { 
+    background: none;
+    z-index: 9999;
+}
+
+#main a.bulle:hover span { 
+    display: block;
+    position: absolute;
+    top: 2em;
+    left: 1em;    
+    background-color: #ffe5be;
+    border: 1px solid black;
+    padding: 2px;   
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+}
+  
+/*PIED DE PAGE*/
+#pied {
+	clear: both;
+    padding: 2em;
+    margin: 10px 0;
+    border-top: 1px solid #FFA508;   
+}
+
+/*
+ LE RESTE...
+*/
+
+.table {
+	margin:10px auto;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 97%;	
+}
+.th {
+	border:1px solid black;
+	border-right:none;
+}
+.td {
+	border-left:1px solid black;
+	text-align: left;
+}
+
+.block {
+	border:1px solid #B3B3B3;	
+	/*margin:5px 0 5px 10px;*/
+}
+
+.titreBlock {
+	border-bottom: 1px dotted black;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+
+.corpsBlock {
+	/*padding:0 5px 5px 5px;*/
+	font-weight:normal;
+}
+
+.profilBlock{
+	/*margin: 10px 0 5px 5px;*/
+	margin-top: 10px;
+}
+
+	
+.cartoucheLine {
+	text-align:right;
+	border-bottom:2px solid #FFA508;
+}
+.centerbox {
+    text-align : center; 
+    margin : 5em 0 0 0; 
+    /*border : 1px solid rgb(204, 204, 204);*/
+}
+
+
+.bouton:hover{
+    background-color:#FFE5BE;
+    color : black;
+    text-decoration : underline;
+}
+.bouton{
+    display:block;
+    text-decoration:none;
+    background-color:#FFA508;
+    padding:3px;margin:3px 5px;
+    width:150px;
+    border:1px solid black;
+    color:white;
+    font-weight : bold;  
+}
+
+
+.cadreList {	
+	margin:0 0.5em 0 0.5em;
+	overflow:auto;
+	text-align:left;
+	border:1px solid #FFE5BE;
+	background-color: #f3f8f8;
+}
+
+.cadreListTitre {
+	margin:0.5em 0.5em 0 0.5em;
+	text-align:center;
+	border:1px solid #FFE5BE;
+	background-color : #FFFCF8;
+    background-image : url("img/th_bg.gif");
+	font-weight : bold;  	
+}
+
+/*Round Cadre */
+.infoTitle{
+	background-color : #FFE5BE;
+    background-image : url(img/fileopen.png);
+    background-position : 0.5em 0.2em;
+    background-repeat : no-repeat;
+    text-align : center;
+	font-weight : bold; 
+	vertical-align : middle;
+	border : 1px solid black;  
+	height: 1.8em;  
+	padding-top: 0.3em;  
+	margin: -1px;  
+}
+.info{	
+	margin : 0 auto;
+	min-height : 10px;
+	clear : both;	 	
+	border-collapse : collapse;
+	padding : 0px 0px 10px 0px;		
+	-moz-border-radius : 20px;	
+    border : 1px solid black;
+    background-color: #F1F1F1;
+}
+
+.notetip,.warning,.confirm{
+	margin : 5px auto;
+	min-height : 10px;
+	clear : both;
+	text-align : center;
+	font-weight : bold;  
+	vertical-align : middle;        
+	border-collapse : collapse;
+	padding : 10px 15px 10px 40px;	
+	background-repeat : no-repeat;
+	-moz-border-radius : 20px;	
+}
+
+.confirm{	
+	font-weight : normal;
+	background-color : #FFE5BE;
+    background-image : url(img/confirm.png);
+    background-position : 10px 10px;
+    border : 1px solid black;
+}
+
+.notetip{
+	background-color : #DDE9FB;
+    background-image : url(img/info.gif);
+    background-position : 10px 10px;
+    border : 1px solid #345EE4;
+}
+.warning{
+	background-color : #FFEAEA;
+    background-image : url(img/warning.gif);
+    background-position : 10px 10px;
+    border : 1px solid rgb(255,0,0);
+}
+
+.aide{
+	text-align:justify;	
+	border: 1px solid #345EE4;
+    background-color: #DDE9FB;
+    padding: 0.5em 1em 0.5em 30px;
+    -moz-border-radius :10px;
+    margin-top : -25px;
+}
+.buttonlink{
+	width:35em;
+	padding:1em 2em 1em 3em;
+	background-position:0.5em 0.2em;
+	background-repeat:no-repeat;
+	margin : 0 auto;
+	min-height : 10px;
+	clear : both;	 	
+	border-collapse : collapse;	
+	-moz-border-radius : 20px;	
+    border : 1px solid black;
+    background-color: #F1F1F1;
+    cursor:pointer;
+}
+
+.searchzone {
+	border : none;
+	background-color : #FFFCF8;
+	clear : both;
+	height : 100%;
+	margin : 0;
+	padding : 0;
+	width : 100%;
+}
+
+.searchzone input, textarea, select, button{
+	background-color : #FCFCFC;
+}
+
+.searchzone button{
+	background-color : #EFEFF3;	
+}
+
+.searchzone radio {
+	border : none;
+}
+.selected {
+	background : #D7D7D7 !important;
+	font-weight : bold;
+	color : #218CA5;
+}
+
+.deleted {
+    background : #FBFBF9 url(img/barre.gif) repeat-x 50% !important;    
+    font-style : italic;
+    color : #6C6C53;
+}
+
+.required {
+    font-weight : bold;
+}
+
+.pair {
+    background : #f3f8f8 !important;
+}
+
+.impair {
+    background : #FFFFFF !important;
+}
+
+.loginboxlink{
+	width:35em;
+	padding:1em 2em 1em 3em;
+	background-position:0.5em 0.2em;
+	background-repeat:no-repeat;
+	background-image:url("img/enter.png");
+	margin : 0 auto;
+	min-height : 10px;
+	clear : both;	 	
+	border-collapse : collapse;	
+	-moz-border-radius : 20px;	
+    border : 1px solid black;
+    background-color: #F1F1F1;
+    cursor:pointer;
+}
+
+.lostpasswordboxlink{
+	width:35em;
+	padding:1em 2em 1em 3em;
+	background-position:0.5em 0.2em;
+	background-repeat:no-repeat;
+	background-image:url("img/pwd.png");
+	margin : 0 auto;
+	min-height : 10px;
+	clear : both;	 	
+	border-collapse : collapse;	
+	-moz-border-radius : 20px;	
+    border : 1px solid black;
+    background-color: #F1F1F1;
+    cursor:pointer;
+}
+
+/*
+surcharge de styles de CktlCommon.css
+*/
+.login_label, .login_input, .login_error {
+    padding: 0px;
+}
+
+/*
+ CSS Document
+ (c) By Xul.fr
+ Freeware
+*/
+
+#content
+{
+    margin-left:24px;
+    margin-right:24px;
+    width:700px;    
+}
+
+#tabs ul
+{
+    font: normal 14px arial, sans, sans-serif;
+    -list-style-type: none;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom: 26px;
+    width:702px;
+}
+
+#tabs ul li 
+{
+    display: inline;
+    float: left;
+    height: 24px;
+    min-width:80px;
+    text-align:center;
+    padding:0;
+    margin: 1px 0px 0px 0px;
+    border: 1px solid gray;
+    background-color:#eee;
+	-moz-border-radius-topleft:7px;
+	-moz-border-radius-topright:7px;
+}
+
+#tabs ul li.selectedTab 
+{
+	background-color:none;
+	-moz-border-radius-topleft:7px;
+	-moz-border-radius-topright:7px;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+
+#tabs ul li a 
+{
+    float: left;
+    color: #666;
+    text-decoration: none;
+    padding: 4px;
+    text-align:center;    
+    min-width:80px;
+}
+
+#tabs ul li a.selectedTab
+{
+    color: #000;
+    font-weight:bold;
+    background-color: none;
+    border-bottom: 1px solid #fff;
+}
+
+#tabs ul li a:hover
+{
+    color: #000;
+    font-weight:bold;
+    background-color: none;
+}
+
+#container 
+{
+    background: white;
+    border:1px solid gray;
+    border-top: none;
+    width:100%;
+    padding:5px 5px 10px;
+    margin:0;
+    left:0;
+    top:0;	
+    -moz-border-radius-bottomleft:7px;
+	-moz-border-radius-bottomright:7px;
+}
+
+
+  

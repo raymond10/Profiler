@@ -1,0 +1,62 @@
+{
+    attributes = (
+        {
+            columnName = "FDIP_CODE"; 
+            externalType = VARCHAR2; 
+            name = fdipCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 7; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "FSPN_ABREVIATION"; 
+            externalType = VARCHAR2; 
+            name = fspnAbreviation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            columnName = "FSPN_KEY"; 
+            externalType = NUMBER; 
+            name = fspnKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "FSPN_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = fspnLibelle; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 200; 
+        }
+    ); 
+    attributesUsedForLocking = (fdipCode, fspnAbreviation, fspnKey, fspnLibelle); 
+    className = "org.cocktail.profiler.server.eof.EOScolFormationSpecialisation"; 
+    classProperties = (fspnAbreviation, fspnKey, fspnLibelle, toInscDipls, toScolFormationDiplome); 
+    externalName = "SCOLARITE.SCOL_FORMATION_SPECIALISATION"; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolFormationSpecialisation; 
+    primaryKeyAttributes = (fspnKey); 
+    relationships = (
+        {
+            destination = InscDipl; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = dspeCode; sourceAttribute = fspnKey; }); 
+            name = toInscDipls; 
+        }, 
+        {
+            destination = ScolFormationDiplome; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fdipCode; sourceAttribute = fdipCode; }); 
+            name = toScolFormationDiplome; 
+        }
+    ); 
+}

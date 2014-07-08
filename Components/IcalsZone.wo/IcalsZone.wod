@@ -1,0 +1,16 @@
+IndividuCals : IndividuICalUI {
+	editedPersonne = editedPersonne;
+	ec = getEc;
+	wantReset = session.wantReset;
+	utilisateurPersId = ^utilisateurPersId;
+}
+
+frmIcal : ERXWOForm {
+  multipleSubmit = true;
+  id = "frmIcal";
+}
+
+AucIcal : AjaxUpdateContainer {
+  id = aucIcalId;
+}
+

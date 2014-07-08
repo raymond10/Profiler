@@ -1,0 +1,798 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "ACTIV_CODE"; 
+            externalType = VARCHAR2; 
+            name = activCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "COTI_CODE"; 
+            externalType = VARCHAR2; 
+            name = cotiCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DACT_CODE"; 
+            externalType = VARCHAR2; 
+            name = dactCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DPTG_CODE_AUT_ETAB"; 
+            externalType = VARCHAR2; 
+            name = dptgCodeAutEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DPTG_CODE_DER_DIPL"; 
+            externalType = VARCHAR2; 
+            name = dptgCodeDerDipl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DPTG_CODE_DER_ETAB"; 
+            externalType = VARCHAR2; 
+            name = dptgCodeDerEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DSITU_CODE"; 
+            externalType = VARCHAR2; 
+            name = dsituCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "DSPE_CODE_FUTUR"; 
+            externalType = NUMBER; 
+            name = dspeCodeFutur; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ETAB_CODE_AUT_ETAB"; 
+            externalType = VARCHAR2; 
+            name = etabCodeAutEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 8; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ETAB_CODE_DER_DIPL"; 
+            externalType = VARCHAR2; 
+            name = etabCodeDerDipl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 8; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ETAB_CODE_DER_ETAB"; 
+            externalType = VARCHAR2; 
+            name = etabCodeDerEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 8; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ETAB_CODE_TRANS"; 
+            externalType = VARCHAR2; 
+            name = etabCodeTrans; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 8; 
+        }, 
+        {
+            columnName = "ETUD_NUMERO"; 
+            externalType = NUMBER; 
+            name = etudNumero; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_1INSC_DEUG_DUT"; 
+            externalType = NUMBER; 
+            name = hist1InscDeugDut; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ACAD_BOURSE"; 
+            externalType = VARCHAR2; 
+            name = histAcadBourse; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            columnName = "HIST_ACCES_INFO"; 
+            externalType = NUMBER; 
+            name = histAccesInfo; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ACTIV_PROF"; 
+            externalType = NUMBER; 
+            name = histActivProf; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_ADH_AGME"; 
+            externalType = NUMBER; 
+            name = histAdhAgme; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_AFFSS"; 
+            externalType = NUMBER; 
+            name = histAffss; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ANNEE_DER_DIPL"; 
+            externalType = NUMBER; 
+            name = histAnneeDerDipl; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ANNEE_DER_ETAB"; 
+            externalType = NUMBER; 
+            name = histAnneeDerEtab; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ANNEE_DIPL_FUTUR"; 
+            externalType = NUMBER; 
+            name = histAnneeDiplFutur; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_ANNEE_SCOL"; 
+            externalType = NUMBER; 
+            name = histAnneeScol; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_ASSURANCE_CIVILE"; 
+            externalType = NUMBER; 
+            name = histAssuranceCivile; 
+            precision = 1; 
+            userInfo = {"_EntityModeler" = {generateSource = NO; }; }; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ASSURANCE_CIVILE_CIE"; 
+            externalType = VARCHAR2; 
+            name = histAssuranceCivileCie; 
+            userInfo = {"_EntityModeler" = {generateSource = NO; }; }; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ASSURANCE_CIVILE_NUM"; 
+            externalType = VARCHAR2; 
+            name = histAssuranceCivileNum; 
+            userInfo = {"_EntityModeler" = {generateSource = NO; }; }; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_AUTRE_CAS_EXO"; 
+            externalType = VARCHAR2; 
+            name = histAutreCasExo; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            columnName = "HIST_AYANT_DROIT"; 
+            externalType = NUMBER; 
+            name = histAyantDroit; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_BOURSE"; 
+            externalType = NUMBER; 
+            name = histBourse; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_DATE_TRANSFERT"; 
+            externalType = DATE; 
+            name = histDateTransfert; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "HIST_DEM_EMPL"; 
+            externalType = NUMBER; 
+            name = histDemEmpl; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_DUREE_INT"; 
+            externalType = NUMBER; 
+            name = histDureeInt; 
+            precision = 2; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ECH_BOURSE"; 
+            externalType = NUMBER; 
+            name = histEchBourse; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_ENS_DER_ETAB"; 
+            externalType = VARCHAR2; 
+            name = histEnsDerEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            columnName = "HIST_FOR_PROF"; 
+            externalType = NUMBER; 
+            name = histForProf; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_INT_ETUD"; 
+            externalType = NUMBER; 
+            name = histIntEtud; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_LIBELLE_AUT_ETAB"; 
+            externalType = VARCHAR2; 
+            name = histLibelleAutEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_LIBELLE_DER_DIPL"; 
+            externalType = VARCHAR2; 
+            name = histLibelleDerDipl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_LIBELLE_DER_ETAB"; 
+            externalType = VARCHAR2; 
+            name = histLibelleDerEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_LIBELLE_PROF"; 
+            externalType = VARCHAR2; 
+            name = histLibelleProf; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_NB_INSC_DEUG"; 
+            externalType = NUMBER; 
+            name = histNbInscDeug; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_NUMERO"; 
+            externalType = NUMBER; 
+            name = histNumero; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_NUMERO_ALLOC"; 
+            externalType = VARCHAR2; 
+            name = histNumeroAlloc; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 13; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_REDOUBLE"; 
+            externalType = NUMBER; 
+            name = histRedouble; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_REMARQUES"; 
+            externalType = VARCHAR2; 
+            name = histRemarques; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            columnName = "HIST_RESTE_BU"; 
+            externalType = NUMBER; 
+            name = histResteBu; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_SALARIE"; 
+            externalType = VARCHAR2; 
+            name = histSalarie; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_SALARIE_LIBELLE"; 
+            externalType = VARCHAR2; 
+            name = histSalarieLibelle; 
+            userInfo = {"_EntityModeler" = {generateSource = NO; }; }; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_SALARIE_RNE"; 
+            externalType = VARCHAR2; 
+            name = histSalarieRne; 
+            userInfo = {"_EntityModeler" = {generateSource = NO; }; }; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 8; 
+        }, 
+        {
+            columnName = "HIST_TELEENS"; 
+            externalType = NUMBER; 
+            name = histTeleens; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_TRANSFERT"; 
+            externalType = VARCHAR2; 
+            name = histTransfert; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 50; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_TYPE_FORMATION"; 
+            externalType = VARCHAR2; 
+            name = histTypeFormation; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_TYPE_REGIME"; 
+            externalType = VARCHAR2; 
+            name = histTypeRegime; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 100; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_VILLE_AUT_ETAB"; 
+            externalType = VARCHAR2; 
+            name = histVilleAutEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 30; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_VILLE_DER_DIPL"; 
+            externalType = VARCHAR2; 
+            name = histVilleDerDipl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "HIST_VILLE_DER_ETAB"; 
+            externalType = VARCHAR2; 
+            name = histVilleDerEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 80; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "LANG_CODE"; 
+            externalType = VARCHAR2; 
+            name = langCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MUT_CODE_MUT"; 
+            externalType = VARCHAR2; 
+            name = mutCodeMut; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MUT_CODE_ORGA"; 
+            externalType = VARCHAR2; 
+            name = mutCodeOrga; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "ORES_CODE"; 
+            externalType = VARCHAR2; 
+            name = oresCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PAYS_CODE_DER_DIPL"; 
+            externalType = VARCHAR2; 
+            name = paysCodeDerDipl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PAYS_CODE_DER_ETAB"; 
+            externalType = VARCHAR2; 
+            name = paysCodeDerEtab; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "PRO_CODE_ETUD"; 
+            externalType = VARCHAR2; 
+            name = proCodeEtud; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "QTRA_CODE"; 
+            externalType = VARCHAR2; 
+            name = qtraCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "SITU_CODE"; 
+            externalType = VARCHAR2; 
+            name = situCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TCPRE_CODE"; 
+            externalType = VARCHAR2; 
+            name = tcpreCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TDIPL_CODE_DER_DIPL"; 
+            externalType = VARCHAR2; 
+            name = tdiplCodeDerDipl; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TDIS_CODE"; 
+            externalType = VARCHAR2; 
+            name = tdisCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "THAN_CODE"; 
+            externalType = VARCHAR2; 
+            name = thanCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        activCode, 
+        cotiCode, 
+        dactCode, 
+        dptgCodeAutEtab, 
+        dptgCodeDerDipl, 
+        dptgCodeDerEtab, 
+        dsituCode, 
+        dspeCodeFutur, 
+        etabCodeAutEtab, 
+        etabCodeDerDipl, 
+        etabCodeDerEtab, 
+        etabCodeTrans, 
+        etudNumero, 
+        hist1InscDeugDut, 
+        histAcadBourse, 
+        histAccesInfo, 
+        histActivProf, 
+        histAdhAgme, 
+        histAffss, 
+        histAnneeDerDipl, 
+        histAnneeDerEtab, 
+        histAnneeDiplFutur, 
+        histAnneeScol, 
+        histAssuranceCivile, 
+        histAssuranceCivileCie, 
+        histAssuranceCivileNum, 
+        histAutreCasExo, 
+        histAyantDroit, 
+        histBourse, 
+        histDateTransfert, 
+        histDemEmpl, 
+        histDureeInt, 
+        histEchBourse, 
+        histEnsDerEtab, 
+        histForProf, 
+        histIntEtud, 
+        histLibelleAutEtab, 
+        histLibelleDerDipl, 
+        histLibelleDerEtab, 
+        histLibelleProf, 
+        histNbInscDeug, 
+        histNumero, 
+        histNumeroAlloc, 
+        histRedouble, 
+        histRemarques, 
+        histResteBu, 
+        histSalarie, 
+        histSalarieLibelle, 
+        histSalarieRne, 
+        histTeleens, 
+        histTransfert, 
+        histTypeFormation, 
+        histTypeRegime, 
+        histVilleAutEtab, 
+        histVilleDerDipl, 
+        histVilleDerEtab, 
+        langCode, 
+        mutCodeMut, 
+        mutCodeOrga, 
+        oresCode, 
+        paysCodeDerDipl, 
+        paysCodeDerEtab, 
+        proCodeEtud, 
+        qtraCode, 
+        situCode, 
+        tcpreCode, 
+        tdiplCodeDerDipl, 
+        tdisCode, 
+        thanCode
+    ); 
+    className = "org.cocktail.profiler.server.eof.EOHistorique"; 
+    classProperties = (
+        cotiCode, 
+        dactCode, 
+        dspeCodeFutur, 
+        etudNumero, 
+        hist1InscDeugDut, 
+        histAcadBourse, 
+        histAccesInfo, 
+        histActivProf, 
+        histAdhAgme, 
+        histAffss, 
+        histAnneeDerDipl, 
+        histAnneeDerEtab, 
+        histAnneeDiplFutur, 
+        histAnneeScol, 
+        histAssuranceCivile, 
+        histAssuranceCivileCie, 
+        histAssuranceCivileNum, 
+        histAutreCasExo, 
+        histAyantDroit, 
+        histBourse, 
+        histDateTransfert, 
+        histDemEmpl, 
+        histDureeInt, 
+        histEchBourse, 
+        histEnsDerEtab, 
+        histForProf, 
+        histIntEtud, 
+        histLibelleAutEtab, 
+        histLibelleDerDipl, 
+        histLibelleDerEtab, 
+        histLibelleProf, 
+        histNbInscDeug, 
+        histNumero, 
+        histNumeroAlloc, 
+        histRedouble, 
+        histRemarques, 
+        histResteBu, 
+        histSalarie, 
+        histSalarieLibelle, 
+        histTeleens, 
+        histTransfert, 
+        histTypeFormation, 
+        histVilleAutEtab, 
+        histVilleDerDipl, 
+        histVilleDerEtab, 
+        proCodeEtud, 
+        histTypeRegime, 
+        toInscDipls
+    ); 
+    externalName = "GARNUCHE.HISTORIQUE"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            activCode, 
+            cotiCode, 
+            dactCode, 
+            dsituCode, 
+            dspeCodeFutur, 
+            etudNumero, 
+            hist1InscDeugDut, 
+            histAcadBourse, 
+            histAccesInfo, 
+            histActivProf, 
+            histAdhAgme, 
+            histAffss, 
+            histAnneeDerDipl, 
+            histAnneeDerEtab, 
+            histAnneeDiplFutur, 
+            histAnneeScol, 
+            histAssuranceCivile, 
+            histAssuranceCivileCie, 
+            histAssuranceCivileNum, 
+            histAutreCasExo, 
+            histAyantDroit, 
+            histBourse, 
+            histDateTransfert, 
+            histDemEmpl, 
+            histDureeInt, 
+            histEchBourse, 
+            histEnsDerEtab, 
+            histForProf, 
+            histIntEtud, 
+            histLibelleAutEtab, 
+            histLibelleDerDipl, 
+            histLibelleDerEtab, 
+            histLibelleProf, 
+            histNbInscDeug, 
+            histNumeroAlloc, 
+            histRedouble, 
+            histRemarques, 
+            histResteBu, 
+            histSalarie, 
+            histSalarieLibelle, 
+            histSalarieRne, 
+            histTeleens, 
+            histTransfert, 
+            histTypeFormation, 
+            histVilleAutEtab, 
+            histVilleDerDipl, 
+            histVilleDerEtab, 
+            langCode, 
+            oresCode
+        ); 
+    }; 
+    name = Historique; 
+    primaryKeyAttributes = (histNumero); 
+    relationships = (
+        {
+            destination = InscDipl; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = histNumero; sourceAttribute = histNumero; }); 
+            name = toInscDipls; 
+        }
+    ); 
+}

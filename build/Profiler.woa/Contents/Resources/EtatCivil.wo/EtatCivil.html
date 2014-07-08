@@ -1,0 +1,152 @@
+<table cellpadding = "0" cellspacing = "0" border = "0" style = "padding-top:10px;">
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:600px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+  		<!--
+    	  <span style = "margin-left:20px">Informations administratives</span>
+    	  -->
+    	  <span style = "margin-left:20px">Etat civil</span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+		<table width = "97%" cellpadding = "3" >
+			<tr class="impair">
+				<th class="titre" width = "150">Civilité</th>
+				<td class = "alignToLeft"><webobject name = "Civilite"></webobject></td>
+			</tr>
+			<tr class="pair">
+				<th class="titre">Nom usuel</th>
+				<td class = "alignToLeft"><webobject name = "NomUsuel"></webobject></td>
+			</tr>
+			<tr class="impair">
+				<th class="titre">Nom patronymique</th>
+				<td class = "alignToLeft"><webobject name = "NomPat"></webobject></td>
+			</tr>
+			<tr class="pair">
+				<th class="titre">Prénom</th>
+				<td class = "alignToLeft"><webobject name = "Prenom"></webobject> (<webobject name = "Prenom2"></webobject>)</td>
+			</tr>
+			<tr class="impair">
+				<th class="titre">Date de naissance</th>
+				<td class = "alignToLeft"><webobject name = "DateNaissance"></webobject></td>
+			</tr>
+			<tr class="pair">
+				<th class="titre">Lieu de naissance</th>
+				<td class = "alignToLeft"><webobject name = "VilleNaissance"></webobject></td>
+			</tr>
+			<tr class="impair">
+				<th class="titre">Situation familiale</th>
+				<td class = "alignToLeft"><webobject name = "Situation"></webobject></td>
+			</tr>
+			<!-- 
+			<tr class="pair">
+				<th class="titre">NUMEN</th>
+				<td class = "alignToLeft"></td>
+			</tr> -->
+		</table>
+		</div>
+	  </div>
+	</td>
+  </tr>
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:600px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+    	  <span style = "margin-left:20px">Enfant(s)</span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+  		<webobject name = "hasEnfant">
+		  <table width = "97%" class="table">
+			<tr class="titre boxTitre">
+				<th class = "th">Prénom</th><th class = "th">Nom</th><th class = "th">Sexe</th><th class = "th">Naissance</th>
+			</tr>
+		<webobject name = "Enfants">
+			<tr class=<webobject name=AlternateColor></webobject>>
+				<td  class = "td"><webobject name = "NomEnfant"></webobject></td>
+				<td class = "td"><webobject name = "PrenomEnfant"></webobject></td>
+				<td  class = "td" style = "text-align:center;"><webobject name = "SexeEnfant"></webobject></td>
+				<td class = "td" style = "text-align:center;"><webobject name = "NaissanceEnfant"></webobject></td>
+			</tr>
+		</webobject>
+		</table>
+	  </webobject>
+	  <webobject name = "ElseEnfant">
+		<div align = "center">Vous n'avez pas d'enfant renseigné.</div>
+      </webobject>
+	  </div>
+	  </div>
+	</td>
+  </tr>
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:600px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+    	  <span style = "margin-left:20px">Référence(s) bancaire(s)</span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+  		<webobject name = "hasRibs">
+		<table width = "97%" class="table">
+		  <tr class="titre boxTitre">
+			<th class = "th">Banque</th>
+			<th class = "th">Guichet</th>
+			<th class = "th">Compte</th><th class = "th">Clé</th><th class = "th">IBAN</th><th class = "th">BIC/SWIFT</th>
+		  </tr>
+		  <webobject name = "Ribs">
+			<tr class=<webobject name=AlternateColor></webobject>>
+			  <td  class = "td"><webobject name = "RibBanque"></webobject></td>
+			  <td class = "td"><webobject name = "RibGuichet"></webobject></td>
+			  <td class = "td"><webobject name = "RibCompte"></webobject></td>
+			  <td class = "td"><webobject name = "RibCle"></webobject></td>
+			  <td class = "td"><webobject name = "Iban"></webobject>&nbsp;</td>
+			  <td class = "td"><webobject name = "Bic"></webobject>&nbsp;</td>
+			</tr>
+		  </webobject>
+		</table>
+	  </webobject>
+	  <webobject name = "ElseRibs">
+		<div align = "center">Vous n'avez pas de coordonnées bancaires renseignées.</div>
+      </webobject>
+		</div>
+	  </div>
+	</td>
+  </tr>
+
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:600px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+    	  <span style = "margin-left:20px">Diplôme(s)</span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+  		<webobject name = "hasDiplomes">
+	    <table width = "97%" class = "table">
+		  <tr class="titre boxTitre">
+			<th class = "th">Diplôme</th><th class = "th">Année</th><th class = "th">Lieu</th><th class = "th" width = "50">Titulaire</th>
+		  </tr>
+		  <webobject name = "Diplomes">
+			<tr class=<webobject name=AlternateColor></webobject>>
+			  <td class = "td"><webobject name = "Diplome"></webobject></td>
+			  <webobject name = "hasAnneeDiplome">
+			  <td class = "td" style = "text-align:center;"><webobject name = "AnneeDiplome"></webobject></td>
+			  </webobject>
+			  <td class = "td"><webobject name = "LieuDiplome"></webobject></td>
+			  <td class = "td" style = "text-align:center;"><webobject name = "TitulaireDiplome"></webobject></td>
+			</tr>
+		  </webobject>
+		  <webobject name = "hasBac">
+			  <td class = "td"><webobject name = "Bac"></webobject></td>
+			  <td class = "td" style = "text-align:center;"><webobject name = "BacAnn"></webobject></td>
+			  <td class = "td"><webobject name = "BacLieu"></webobject> (<webobject name = "BacDpt"></webobject>)</td>
+			  <td class = "td" style = "text-align:center;">O</td>
+		  </webobject>
+		</table>
+		</webobject>
+	  <webobject name = "ElseDiplome">
+		<div align = "center">Vous n'avez pas de diplôme renseigné.</div>
+      </webobject>
+		</div>
+	  </div>
+	</td>
+  </tr>
+  
+</table>

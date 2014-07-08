@@ -1,0 +1,43 @@
+{
+    attributes = (
+        {
+            columnName = "FANN_KEY"; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "MEC_KEY"; 
+            externalType = NUMBER; 
+            name = mecKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (mecKey, fannKey); 
+    className = "org.cocktail.profiler.server.eof.EOScolMaquetteEcLibre"; 
+    classProperties = (scolFormationAnnee, scolMaquetteEc, fannKey, mecKey); 
+    externalName = "SCOLARITE.SCOL_MAQUETTE_EC_LIBRE"; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolMaquetteEcLibre; 
+    primaryKeyAttributes = (mecKey); 
+    relationships = (
+        {
+            destination = ScolFormationAnnee; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fannKey; sourceAttribute = fannKey; }); 
+            name = scolFormationAnnee; 
+        }, 
+        {
+            destination = ScolMaquetteEc; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mecKey; sourceAttribute = mecKey; }); 
+            name = scolMaquetteEc; 
+        }
+    ); 
+}

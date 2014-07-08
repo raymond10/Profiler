@@ -1,0 +1,105 @@
+AlternateColor: WOString {
+	value = backgroundColorForRow;
+}
+Elements: WORepetition {
+	list = carriere.elementsTries;
+	item = element;
+}
+DebElement: WOString {
+	value = element.dEffetElement;
+	dateformat = getTimestampFormatter;
+}
+FinElement: WOString {
+	value = element.dFinElement;
+	dateformat = getTimestampFormatter;
+}
+Grade: WOString {
+	value = element.toGrade.llGrade;
+}
+Corps: WOString {
+	value = element.toCorps.llCorps;
+}
+Echelon: WOString {
+	value = element.cEchelon;
+}
+Bap: WOString {
+	value = element.cBap;
+}
+
+
+//hasNoCarriere: ERXNonNullConditional {
+hasNoCarriere: WOConditional {
+//  condition = lstAffectations;
+	condition = hasCarrieres;
+	negate = true;
+}
+
+hasCarriere : WOConditional {
+	condition = hasCarrieres;
+}
+
+Carrieres: WORepetition {
+	list = lstCarrieres;
+	item = carriere;
+}
+
+
+
+Affectations: WORepetition {
+	list = lstAffectations;
+	item = affectation;
+}
+StrAffectation: WOString {
+	value = affectation.toStructure.llStructure;
+}
+QuotAffectation: WOString {
+	value = affectation.numQuotAffectation;
+}
+DebAffectation: WOString {
+	value = affectation.dDebAffectation;
+	dateformat = getTimestampFormatter;
+}
+DebCarriere: WOString {
+	value = carriere.dateDebCarriere;
+}
+FinCarriere: WOString {
+	value = carriere.dateFinCarriere;
+}
+isFini: WOConditional{
+	condition = carriere.dFinCarriere;
+}
+isNotFini: WOConditional{
+	condition = carriere.dFinCarriere;
+	negate = true;
+}
+
+Contrats: WORepetition {
+	list = lstContrats;
+	item = contrat;
+}
+DebutContrat: WOString {
+	value = contrat.dDebContratTrav;
+	dateformat = getTimestampFormatter;
+}
+FinContrat: WOString {
+	value = contrat.dFinContratTrav;
+	dateformat = getTimestampFormatter;
+}
+TypeContrat: WOString {
+	value = contrat.toTypeContratTravail.llTypeContratTrav;
+}
+//hasContrat : ERXNonZeroConditional {
+hasContrat : WOConditional {
+	condition = hasContrats;
+	//condition = lstContrats.count;
+	////negate = true;
+}
+hasNoContrat : WOConditional {
+//	condition = lstContrats;
+	condition = hasContrats;
+	negate = true;
+}
+
+TypePopulation: WOString {
+	value = carriere.toTypePopulation.lcTypePopulation;
+}

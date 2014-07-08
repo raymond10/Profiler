@@ -1,0 +1,55 @@
+{
+    attributes = (
+        {
+            columnName = scolMaquetteEcMecKey; 
+            externalType = NUMBER; 
+            name = scolMaquetteEcMecKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = scolMaquetteRepartitionEcMrecKey; 
+            externalType = NUMBER; 
+            name = scolMaquetteRepartitionEcMrecKey; 
+            precision = 6; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (scolMaquetteEcMecKey, scolMaquetteRepartitionEcMrecKey); 
+    className = "org.cocktail.profiler.server.eof.ScolMaquetteEcScolMaquetteRepartitionEc"; 
+    classProperties = (
+        scolMaquetteEc, 
+        scolMaquetteEcMecKey, 
+        scolMaquetteRepartitionEc, 
+        scolMaquetteRepartitionEcMrecKey
+    ); 
+    externalName = ScolMaquetteEcScolMaquetteRepartitionEc; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolMaquetteEcScolMaquetteRepartitionEc; 
+    primaryKeyAttributes = (scolMaquetteEcMecKey, scolMaquetteRepartitionEcMrecKey); 
+    relationships = (
+        {
+            destination = ScolMaquetteEc; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = mecKey; sourceAttribute = scolMaquetteEcMecKey; }); 
+            name = scolMaquetteEc; 
+        }, 
+        {
+            destination = ScolMaquetteRepartitionEc; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = (
+                {
+                    destinationAttribute = mrecKey; 
+                    sourceAttribute = scolMaquetteRepartitionEcMrecKey; 
+                }
+            ); 
+            name = scolMaquetteRepartitionEc; 
+        }
+    ); 
+}

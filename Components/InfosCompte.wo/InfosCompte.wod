@@ -1,0 +1,43 @@
+Compte : Comptes {
+  editedPersonne = editedPersonne;
+  ec = getEc;
+}
+
+SecretQuestion : SecretQuestion {
+  editedPersonne = editedPersonne;
+  ec = getEc;
+}
+
+BlocageSecretQuestion : WOConditional {
+	condition = accederSecretQuestionDisabled;
+}
+
+MultiComptes : WOConditional {
+  condition = isMultiComptes;
+}
+PopupCompteObserver : AjaxObserveField {
+	//action  = onSelectCompte;
+	fullSubmit = true;
+	updateContainerID = infosCompteId;
+	elementName = "span";
+}
+PopUpComptes : WOPopUpButton {
+  list = lstComptes;
+  selection = session.selectedCompte;
+  item = unCompte;
+  displayString = unCompte.affichage;
+}
+frm : ERXOptionalForm {
+  multipleSubmit = true;
+}
+
+AucInfosCompte : AjaxUpdateContainer {
+  id = infosCompteId;
+}
+
+Else : ERXElse {
+}
+
+UniqueCompte : WOString {
+  value = session.selectedCompte.affichage;
+}

@@ -1,0 +1,14 @@
+HebergeBureaux : ModulePersonneLocalisation {
+	personne = personne;
+	editingContext = editingContext;
+	wantReset = wantResetBureaux;
+}
+
+frmLocal : ERXOptionalForm {
+  multipleSubmit = true;
+  id = "test";
+}
+
+AucLocal : AjaxUpdateContainer {
+  id = aucBureauId;
+}

@@ -1,0 +1,92 @@
+<table cellpadding = "0" cellspacing = "0" border = "0" style = "padding-top:10px;">
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:650px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+  		
+    	  <span style = "margin-left:20px">Affectation(s)</span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+		<table class = "table">
+		
+			<tr class="titre boxTitre"><th class = "th">Structure</th><th class = "th">Quotité</th><th class = "th"> Date de début</th></tr>
+		<webobject name = "Affectations">
+			<tr class=<webobject name=AlternateColor></webobject>>
+				<td class = "td"><webobject name = "StrAffectation"></webobject></td>
+				<td class = "td" style = "text-align:center;"><webobject name = "QuotAffectation"></webobject>%</td>
+				<td class = "td" style = "text-align:center;"><webobject name = "DebAffectation"></webobject></td>
+			</tr> 
+		</webobject>
+		
+		</table>
+		
+		<webobject name = "hasNoCarriere">
+			Vous n'avez aucune information de carrière dans l'établissement.
+		</webobject>
+		</div>
+	  </div>
+	</td>
+  </tr>
+<webobject name = "hasCarriere">
+<webobject name = "Carrieres">
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:650px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+    	  <span style = "margin-left:20px">
+			<webobject name = "TypePopulation"></webobject> du <webobject name = "DebCarriere"></webobject> 
+			<webobject name = "isFini">au <webobject name = "FinCarriere"></webobject></webobject>
+			<webobject name = "isNotFini">à aujourd'hui</webobject>
+		  </span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+		<table class = "table">
+		  <tr class="titre boxTitre">
+			<th  class = "th">D&eacute;but</th><th class = "th">Fin</th><th  class = "th">Grade</th><th class = "th">Corps</th><th class = "th">Echelon</th><th class = "th">Bap</th>
+		  </tr>
+		  <webobject name = "Elements">
+		  <tr class=<webobject name=AlternateColor></webobject>>
+			<td class = "td" style = "text-align:center;"><webobject name = "DebElement"></webobject></td>
+			<td class = "td" style = "text-align:center;"><webobject name = "FinElement"></webobject></td>
+			<td class = "td"><webobject name = "Grade"></webobject></td>
+			<td class = "td"><webobject name = "Corps"></webobject></td>
+			<td class = "td" style = "text-align:center;"><webobject name = "Echelon"></webobject></td>
+			<td class = "td" style = "text-align:center;"><webobject name = "Bap"></webobject></td>
+		  </tr>
+		  </webobject>
+		</table>
+		</div>
+	  </div>
+	</td>
+  </tr>
+</webobject>
+</webobject>
+
+<webobject name = "hasContrat">
+  <tr>
+    <td style = "text-align:center;vertical-align:top;"> 
+	  <div class = "block" style = "width:650px;">
+  		<div class = "boxTitre titreBlock" style = "width:99%;">
+    	  <span style = "margin-left:20px">Contrat(s)</span>
+  		</div>
+  		<div class = "subBox corpsBlock" >
+	    <table class = "table">
+		  <tr class="titre boxTitre"><th class = "th">D&eacute;but</th><th class = "th">Fin</th><th class = "th">Type</th></tr>
+		  <webobject name = "Contrats">
+			<tr class=<webobject name=AlternateColor></webobject>>
+				<td class = "td" style = "text-align:center;"><webobject name = "DebutContrat"></webobject></td>
+				<td class = "td" style = "text-align:center;"><webobject name = "FinContrat"></webobject></td>
+				<td class = "td"><webobject name = "TypeContrat"></webobject></td>
+			</tr>
+		  </webobject>
+	    </table>
+	    </div>
+	  </div>
+	</td>
+  </tr>
+</webobject>
+
+<webobject name = "hasNoContrat">
+	Vous n'avez aucune information de contrat dans l'établissement.
+</webobject>
+</table>

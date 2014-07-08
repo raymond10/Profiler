@@ -1,0 +1,130 @@
+Compte : CompteUI {
+  editingContext = getEc;
+  personne = editedPersonne;
+  selectedCompte = selectedCompte;
+  utilisateurPersId = session.pUser.persId;
+  isMultipleAllowed = false;
+  vlansAutorisesPourCreation = vlanCreation;
+  isReadOnly = true;
+}
+
+BlocageChangePwd : WOConditional {
+	condition = changePwdDisabled;
+}
+
+CanChangePwd : WOConditional {
+  condition = canChangePwd;
+}
+
+AulChnagePwd : AjaxUpdateLink {
+  updateContainerID = aucchangepwd;
+  onSuccess = onClickChangePwd;
+  button = true;
+  value = "Changer le mot de passe";
+  action = iniPwdChange;
+  
+}
+
+AmdChangePwd : AjaxModalDialog {
+	width = "400";
+	title = "Changement du mot de passe";
+	id = changePwdId;
+	showOpener = false;
+	label = "Changer le mot de  passe";
+	button = true;
+	centerVertically = true;
+}
+
+Else : ERXElse {
+}
+
+Login : WOString {
+  value = selectedCompte.cptLogin;
+}
+
+NewPwd : WOTextField {
+  value = newPwd;
+  type = "password";
+  style = styleNewPwd;
+  maxlength = "100";
+}
+
+NewPwd2 : WOTextField {
+  value = newPwd2;
+  type = "password";
+  style = styleNewPwd2;
+  maxlength = "100";
+}
+
+Frm : WOForm {
+  multipleSubmit = true;
+}
+ErreurContainer : AjaxUpdateContainer {
+	id = erreurContainerid;
+	style = "z-index:9999;";
+}
+
+MessageUtil : MessageUtil {
+  idMessage = messageid;
+  idErreur = erreurContainerid;
+}
+
+AsbValide : AjaxSubmitButton {
+  updateContainerID = aucTriggerPwdId;
+  action = validNewPwd;
+  value = "Valider";
+}
+
+AucTriggerPwd : AjaxUpdateContainer {
+	id = aucTriggerPwdId;
+}
+
+AutPwd : AjaxUpdateTrigger {
+	updateContainerIDs = lstRefreshZones;
+}
+
+
+AucFrm : AjaxUpdateContainer {
+  id = frmid;
+}
+
+ScriptClose : WOJavaScript {
+	scriptString = scriptCloseDialog;
+}
+
+AucChangePwd : AjaxUpdateContainer {
+  id = aucchangepwd;
+}
+
+AulCancel : AjaxUpdateLink {
+  updateContainerID = aucchangepwd;
+  action = cancelChange;
+  onSuccess = "function(cancel){Modalbox.hide();}";
+  button = true;
+  value = "Fermer";
+}
+
+IsInChange : WOConditional {
+  condition = isInChange;
+}
+
+PwdChanged : WOConditional {
+  condition = isPwdChanged;
+  //condition = false;
+  negate = true;
+}
+
+HaveDefaultPwd : WOConditional {
+  condition = haveDefaultPwd;
+}
+
+LibelleDefaultPassword : WOString {
+  value = libDefaultPassword;
+}
+
+AulInitPassword : AjaxUpdateLink {
+  updateContainerID = frmid;
+  action = initPassword;
+  button = true;
+  value = "Réinitialiser";
+}

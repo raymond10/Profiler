@@ -1,0 +1,62 @@
+<webobject name = "Wrapper">
+  <div class = "box boxTitre" style = "-moz-border-radius : 10px;margin:15px auto;width:700px;text-align:center;padding:10px 0;">
+    <webobject name = "PersType" />&nbsp;<webobject name = "EditedPersonneName" />
+    <webobject name = "HaveAdminRight">&nbsp;&nbsp;&nbsp; 
+      <webobject name = "AulSearch"> <webobject name = "ImgSearch" /> </webobject>
+      <webobject name = "AucSearch">
+        <div style = "display:none;">
+          <webobject name = "AulOnClose" />
+          <webobject name = "AmdSearch">
+            <webobject name = "IsInSearch">
+              <webobject name = "MyForm1"> <webobject name = "PersonneSrch" /> </webobject>
+            </webobject>
+            <webobject name = "AucSelPersonne">
+              <webobject name = "IsSelPersonne">
+                <webobject name = "AulSelectFromSearch">Choisir <webobject name = "NomSelPersonne" /></webobject>
+              </webobject>
+            </webobject>
+          </webobject>
+        </div>
+      </webobject>
+    </webobject>
+  </div>
+  <div id = "content">
+    <div id = "tabs">
+      <ul>
+        <webobject name = "LiInfo">
+        <!--
+          <webobject name = "GoInfosPerso">Informations Modifiables </webobject>
+          -->
+          <webobject name = "GoInfosPerso">Infos Modifiables </webobject>
+        </webobject>
+        <webobject name = "LiComptes">
+          <webobject name = "GoComptes">Comptes</webobject>
+        </webobject>
+        <webobject name = "IsIndividu">
+          <webobject name = "LiPerso">
+          <!--
+            <webobject name = "GoPerso">Etat civil</webobject>
+            <webobject name = "GoPerso">Informations administratives</webobject>
+            -->
+            <webobject name = "GoPerso">Infos administratives</webobject>
+          </webobject>
+          <webobject name = "DisplayInfosPro">
+          <webobject name = "LiPro">
+          <!--
+            <webobject name = "GoProfessionnelles">Informations professionnelles</webobject>
+            -->
+            <webobject name = "GoProfessionnelles">Infos professionnelles</webobject>
+          </webobject>
+          </webobject>
+        </webobject>
+        <webobject name = "IsInscrit">
+          <webobject name = "LiScol">
+            <webobject name = "GoScol">Scolarité</webobject>
+          </webobject>
+        </webobject>
+      </ul>
+    </div>
+    <webobject name = "AucContent"> <webobject name = "Contents" /> </webobject>
+  </div>
+  <webobject name = "AucTriggerSearch"><webobject name = "AutSearch" /></webobject>
+</webobject>

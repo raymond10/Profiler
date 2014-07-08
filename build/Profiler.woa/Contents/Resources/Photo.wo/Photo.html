@@ -1,0 +1,42 @@
+<div class = "subBox block corpsBlock" style = "text-align:center;">
+  <webobject name = "AucPhoto">
+    <webobject name = "NonNull">
+      <webobject name = "Photo" />
+      <br />
+      <webobject name = "IsPublic">
+        <webobject name = "ImgPublic" />&nbsp;Photo publique<br />
+      </webobject>
+      <webobject name = "Else">
+        <webobject name = "ImgPrivate" />&nbsp;Photo priv&eacute;e<br />
+      </webobject>
+      <i style = "font-size:smaller;">Photo chang&eacute;e le <webobject name = "DateModifPhoto" /></i>
+      <webobject name = "CanDeletePhoto">
+        <br />
+        <webobject name = "AsbDelete" />
+      </webobject>
+    </webobject>
+    <webobject name = "ELse"> <webobject name = "NoPhoto" /> </webobject>
+    <webobject name = "CanChangePhoto">
+      <br />
+      <webobject name = "AulChangePhoto" />
+      <webobject name = "AulChangement">
+        <webobject name = "AmdChangePhoto">
+          <webobject name = "ErreurContainer"> <webobject name = "MessageUtil" /> </webobject>
+          <webobject name = "Frm">
+            <fieldset style = "width:400px;margin:10px auto;">
+              <legend>Choisissez la nouvelle photo </legend>
+              <webobject name = "Upload" />
+              <br />
+              <webobject name = "rbtPhotoPublic" />
+              <label for = "rbtPhotoPublic"><webobject name = "ImgPublic" />&nbsp;Photo publique</label>&nbsp;&nbsp;&nbsp; 
+              <webobject name = "rbtPhotoPrive" />
+              <label for = "rbtPhotoPrive"><webobject name = "ImgPrivate" />&nbsp;Photo priv&eacute;e</label>
+              <br />
+              <webobject name = "SbValide" />&nbsp;<input type = "button" value = "Annuler" onclick = "Modalbox.hide();" />
+            </fieldset>
+          </webobject>
+        </webobject>
+      </webobject>
+    </webobject>
+  </webobject>
+</div>

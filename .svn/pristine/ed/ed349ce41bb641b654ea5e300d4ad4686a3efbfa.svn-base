@@ -1,0 +1,24 @@
+<!-- 
+<webobject name = "IsPhotoEnable">
+<webobject name = "IsIndividu">
+ 
+     <div style = "float:left;width:70%;"><webobject name = "AdrsZone" /></div><div class = "profilBlock" style = "float:left;width:30%;"><webobject name = "Photo" /></div>
+</webobject>
+ </webobject>
+ -->
+<webobject name = "AucInfosPerso">
+  <webobject name = "InfosPersoForm">
+    <webobject name = "AccessPhoto">
+      <div style = "float:left;width:70%;"><webobject name = "AdrsZone" /></div>
+      <div class = "profilBlock" style = "float:left;width:30%;"><webobject name = "Photo" /></div>
+    </webobject>
+    <webobject name = "else"> <webobject name = "AdrsZone" /> </webobject>
+    <br style = "clear: both;" />
+    <webobject name = "TelZone" />
+    <br style = "clear: both;" />
+    <webobject name = "IsLocated"> <webobject name = "LocalZone" /> </webobject>
+    <webobject name = "IsIndividu"> <webobject name = "IcalsZone" /> </webobject>
+    <br />
+    <webobject name = "BtValideInfosPerso" />&nbsp;&nbsp;<webobject name = "BtCancelInfosPerso" />
+  </webobject>
+</webobject>

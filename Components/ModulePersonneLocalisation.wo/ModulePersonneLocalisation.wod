@@ -1,0 +1,28 @@
+IsStructure : WOConditional {
+	condition = editedPersonne.isStructure;
+}
+
+IsIndividu : WOConditional {
+	condition = editedPersonne.isIndividu;
+}
+
+GestSallesStr : GestSallesStructure {
+	structure = editedPersonne;
+	editingContext = getEc;
+}
+
+GestSallesInd : GestSallesIndividu {
+	editingContext = getEc;
+	individu = personne;
+	wantReset = wantReset;
+	isEditing = peutEditerPersonneLocalisation;
+	readOnly = isBureauReadOnlyEnabled;//argument qui desactive la modification d'un bureau
+}
+
+HasGSpotTables : WOConditional {
+	condition = hasGspotTables;
+}
+
+Else : ERXElse {
+	
+}

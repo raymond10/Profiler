@@ -1,0 +1,261 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = "CUM_CODE"; 
+            externalType = VARCHAR2; 
+            name = cumCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }, 
+        {
+            columnName = "DSPE_CODE"; 
+            externalType = NUMBER; 
+            name = dspeCode; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "GRPD_NUMERO"; 
+            externalType = NUMBER; 
+            name = grpdNumero; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "HIST_NUMERO"; 
+            externalType = NUMBER; 
+            name = histNumero; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "IDIPL_AMENAGEMENT"; 
+            externalType = NUMBER; 
+            name = idiplAmenagement; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "IDIPL_ANNEE_SUIVIE"; 
+            externalType = NUMBER; 
+            name = idiplAnneeSuivie; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IDIPL_DATE_DEMISSION"; 
+            externalType = DATE; 
+            name = idiplDateDemission; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "IDIPL_DATE_INSC"; 
+            externalType = DATE; 
+            name = idiplDateInsc; 
+            valueClassName = NSCalendarDate; 
+            valueType = T; 
+        }, 
+        {
+            columnName = "IDIPL_DIPLOMABLE"; 
+            externalType = NUMBER; 
+            name = idiplDiplomable; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IDIPL_MOY_ETU"; 
+            externalType = NUMBER; 
+            name = idiplMoyEtu; 
+            precision = 5; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IDIPL_NOTE_PONDERATION"; 
+            externalType = NUMBER; 
+            name = idiplNotePonderation; 
+            precision = 4; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = "IDIPL_NUMERO"; 
+            externalType = NUMBER; 
+            name = idiplNumero; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IDIPL_NUMERO_DIPL"; 
+            externalType = NUMBER; 
+            name = idiplNumeroDipl; 
+            precision = 8; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "IDIPL_PASSAGE_CONDITIONNEL"; 
+            externalType = VARCHAR2; 
+            name = idiplPassageConditionnel; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IDIPL_RANG"; 
+            externalType = NUMBER; 
+            name = idiplRang; 
+            precision = 3; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "IDIPL_SEMESTRE"; 
+            externalType = NUMBER; 
+            name = idiplSemestre; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = "IDIPL_TYPE_INSCRIPTION"; 
+            externalType = NUMBER; 
+            name = idiplTypeInscription; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MENT_CODE"; 
+            externalType = VARCHAR2; 
+            name = mentCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "MSTA_CODE"; 
+            externalType = NUMBER; 
+            name = mstaCode; 
+            precision = 1; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "RES_CODE"; 
+            externalType = VARCHAR2; 
+            name = resCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = "TECH_CODE"; 
+            externalType = VARCHAR2; 
+            name = techCode; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 2; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        cumCode, 
+        dspeCode, 
+        grpdNumero, 
+        histNumero, 
+        idiplAmenagement, 
+        idiplAnneeSuivie, 
+        idiplDateDemission, 
+        idiplDateInsc, 
+        idiplDiplomable, 
+        idiplMoyEtu, 
+        idiplNotePonderation, 
+        idiplNumero, 
+        idiplNumeroDipl, 
+        idiplPassageConditionnel, 
+        idiplRang, 
+        idiplSemestre, 
+        idiplTypeInscription, 
+        mentCode, 
+        mstaCode, 
+        resCode, 
+        techCode
+    ); 
+    className = "org.cocktail.profiler.server.eof.EOInscDipl"; 
+    classProperties = (
+        grpdNumero, 
+        idiplAmenagement, 
+        idiplAnneeSuivie, 
+        idiplDateDemission, 
+        idiplDateInsc, 
+        idiplDiplomable, 
+        idiplMoyEtu, 
+        idiplNotePonderation, 
+        idiplNumeroDipl, 
+        idiplPassageConditionnel, 
+        idiplRang, 
+        idiplSemestre, 
+        mentCode, 
+        mstaCode, 
+        toHistorique, 
+        toScolFormationSpecialisation
+    ); 
+    externalName = "GARNUCHE.INSC_DIPL"; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            grpdNumero, 
+            idiplAmenagement, 
+            idiplAnneeSuivie, 
+            idiplDateDemission, 
+            idiplDateInsc, 
+            idiplDiplomable, 
+            idiplMoyEtu, 
+            idiplNotePonderation, 
+            idiplNumeroDipl, 
+            idiplPassageConditionnel, 
+            idiplRang, 
+            idiplSemestre, 
+            idiplTypeInscription, 
+            mentCode, 
+            mstaCode
+        ); 
+    }; 
+    name = InscDipl; 
+    primaryKeyAttributes = (idiplNumero); 
+    relationships = (
+        {
+            destination = Historique; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = histNumero; sourceAttribute = histNumero; }); 
+            name = toHistorique; 
+        }, 
+        {
+            destination = ScolFormationSpecialisation; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fspnKey; sourceAttribute = dspeCode; }); 
+            name = toScolFormationSpecialisation; 
+        }
+    ); 
+}

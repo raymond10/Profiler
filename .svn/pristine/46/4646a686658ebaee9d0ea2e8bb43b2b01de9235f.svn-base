@@ -1,0 +1,282 @@
+Wrapper : Wrapper {
+  titre = "Mot de passe perdu";
+}
+
+Login : WOTextField {
+  value = searchLogin;
+}
+
+LoginStr : WOString {
+  value = searchLogin;
+}
+
+Frm : WOForm {
+  multipleSubmit = true;
+}
+
+//AsbValide : AjaxSubmitButton {
+AsbValide : WOSubmitButton {
+//  updateContainerID = "aucpwdlost";
+  action = valide;
+  value = "Valider";
+}
+ErreurContainer : AjaxUpdateContainer {
+	id = "erreurContainerid";
+	style = "z-index:9999;";
+}
+
+MessageUtil : MessageUtil {
+  idMessage = "messageid";
+  idErreur = "erreurContainerid";
+}
+CptNotFound : ERXNonNullConditional {
+  condition = cptEdited;
+  negate = true;
+}
+
+Else : ERXElse {
+}
+
+Compte : CompteUI {
+  editingContext = getEc;
+  personne = session.selectedPersonne;
+  selectedCompte = session.selectedCompte;
+  utilisateurPersId = cptEdited.toIndividu.persId;
+  isMultipleAllowed = false;
+  isReadOnly = true;
+  isCompactView = true;
+  isAnonymized = true;
+}
+
+AucPwdLost : AjaxUpdateContainer {
+  id = "aucpwdlost";
+}
+
+CanSendPassword : WOConditional {
+  condition = canSendPassword;
+}
+
+AulBack : AjaxUpdateLink {
+  updateContainerID = "aucpwdlost";
+  action = backToLogin;
+}
+
+LstMails : WORepetition {
+  list = lstMailsDispo;
+  item = mailToSend;
+}
+
+Mail : WOString {
+  value = mailToSend;
+}
+
+AulSendMail : AjaxUpdateLink {
+  updateContainerID = "erreurContainerid";
+  action = sendMail;
+}
+
+ImgBack: WOImage {
+	alt = "Retour";
+	filename = "img/reload.png";
+	framework = "app";
+	border = 0;
+	title = "Retour";
+	align = "absmiddle";
+}
+
+Out : WOHyperlink {
+   directActionName = "default";   
+}
+
+ImgOut: WOImage {
+	alt = "Accueil";
+	filename = "img/exit.png";
+	framework = "app";
+	border = 0;
+	title = "Retour accueil";
+	align = "absmiddle";
+	height = "15";
+}
+
+HaveQuestion : ERXNonNullConditional {
+  condition = cptEdited.cptQuestion;
+}
+
+AulQuestionSecret : AjaxUpdateLink {
+  
+  onSuccess = "function (open) {openAMD_amdQuestionId();}";
+  button = true;
+  value = "Me connecter avec la question secrète";
+  action = initQuestion;
+}
+
+AucQuestion : AjaxUpdateContainer {
+  id = "aucQuestionId";
+}
+
+AmdQuestion : AjaxModalDialog {
+  width = "600";
+	title = "Question secrète";
+	id = "amdQuestionId";
+	showOpener = false;
+	button = true;
+	centerVertically = true;
+}
+AucQuestionReponse : AjaxUpdateContainer {
+  id = "questionReponseId";
+}
+
+frm : ERXOptionalForm {
+  multipleSubmit = true;
+}
+
+PersoQuest : WOString {
+  value = cptEdited.cptQuestion;
+
+}
+
+Reponse : WOTextField { 
+  value = reponse; 
+  style = "min-width: 400px;"; 
+}
+
+AsbValideQuest : AjaxSubmitButton {
+  updateContainerID = "questionReponseId";
+  action = valideQuestion;
+  value = "Valider";
+}
+AulCancel : AjaxUpdateLink {
+  updateContainerID = "questionReponseId";
+  onSuccess = "function(cancel){Modalbox.hide();}";
+  button = true;
+  value = "Fermer";
+}
+LoginOk : WOConditional {
+  condition = loginOk;
+}
+
+NotLoginOk : WOConditional {
+  condition = loginOk;
+  negate = true;
+}
+
+GoPwdChange : WOHyperlink {
+  action = connect;
+  
+}
+
+ErreurContainerQuest : AjaxUpdateContainer {
+	id = "erreurContainerquestid";
+	style = "z-index:9999;";
+}
+
+MessageUtilQuest : MessageUtil {
+  idMessage = "messagequestid";
+  idErreur = "erreurContainerquestid";
+}
+
+
+HaveMailDT : WOConditional {
+  condition = canMakeDtMail;
+}
+
+
+AulMailDt : AjaxUpdateLink {  
+  onSuccess = "function (open) {openAMD_amdmaildtId();}";
+  button = true;
+  value = "Contacter le service informatique par mail";
+  action = initMailDt;
+}
+
+AucMailDT : AjaxUpdateContainer {
+  id = "aucmaildtId";
+}
+
+AmdMailDt : AjaxModalDialog {
+  	width = "650";
+	title = "Contacter le service informatique par mail";
+	id = "amdmaildtId";
+	showOpener = false;
+	button = true;
+	centerVertically = true;
+	
+}
+
+AucDTMail : AjaxUpdateContainer {
+  id = "dtmailId";
+}
+
+ErreurContainerMail : AjaxUpdateContainer {
+	id = "erreurContainermailid";
+	style = "z-index:9999;";
+}
+
+MessageUtilMail : MessageUtil {
+  idMessage = "messagemailid";
+  idErreur = "erreurContainermailid";
+}
+
+MailSender : WOConditional {
+  condition = mailSended;
+}
+
+MailNotSender : WOConditional {
+  condition = mailSended;
+  negate = true;
+}
+
+SecurityInfo : WOString {
+	value = securityInformation;
+}
+
+//MailSamDT : WOString {
+//  value = mailDtSam;
+//}
+
+AdrsMailSender : WOTextField {
+  value = defaultMailSender;
+  size = "50";
+}
+
+SujetMail : WOString {
+  value = sujetMail;
+  size = "50";
+}
+
+DefaultMessageDT : WOString {
+  value = defaultMessageDT;
+}
+
+MessageDT : WOText {
+  value = messageDT;
+  rows = "5";
+  cols = "50";
+  style = "background-color:#FFFFFF;";
+  
+}
+
+AsbEnvoieMail : AjaxSubmitButton {
+  //updateContainerID = "dtmailId";
+  action = envoieMailDT;
+  value = "Envoyer";
+}
+AulCancelMail : AjaxUpdateLink {
+  updateContainerID = "dtmailId";
+  onSuccess = "function(cancel){Modalbox.hide();}";
+  button = true;
+  value = "Annuler";
+  action = cancelMailDT;
+}
+
+AulCloseMail : AjaxUpdateLink {
+  updateContainerID = "dtmailId";
+  onSuccess = "function(cancel){Modalbox.hide();}";
+  button = true;
+  value = "Fermer";
+}
+
+cc : WOCheckBox {
+  selection = mailCopie;
+  value = "O";
+  style = "border:none;";
+}

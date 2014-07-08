@@ -1,0 +1,185 @@
+Wrapper : Wrapper {
+  titre = "Profil personne";
+}
+
+EditedPersonneName : WOString {
+  value = session.selectedPersonne.nomCompletAffichage;
+}
+
+PersType : WOString {
+  value = session.selectedPersonne.persType;
+}
+
+MyForm1 : WOForm {
+	id = "id";
+	name = "form1";
+	multipleSubmit = true;
+	action = doNothing;
+	onsubmit = "return false;";
+	
+}
+//PersonneGestion1 : PersonneGestion {
+//	utilisateurPersId = getPUser.persId;
+	//wantReset = wantReset;
+//	selectedPersonne = selectedPersonne;
+//	disableSrch = false;
+	//disableForm = false;
+//	disableSelection = false;
+	
+	//callbackOnSelectionnerPersonne = "onSelectionnerPersonne";
+	//onSelectionnerPersonneSuccess = "function (oc) {alert('selection ok');return true;}";
+	//onFormAnnulerSuccess = "function (oc) {alert('annuler ok');return true;}";
+	//onFormEnregistrerSuccess = "function (oc) {alert('enregistrement ok');return true;}";
+	//formID = "id";
+//}
+
+GoInfosPerso : WOHyperlink {
+	action = goInfosPerso;
+	class = classInfosPerso;
+}
+
+Contents : WOSwitchComponent {
+  WOComponentName = session.selectedOnglet;
+  ec = ec;
+  editedPersonne = session.selectedPersonne;
+}
+
+LiInfo : WOGenericContainer {
+  elementName = "li";
+  class = classInfosPerso;
+}
+
+LiPerso : WOGenericContainer {
+  elementName = "li";
+  class = classEtatCivil;
+}
+LiPro : WOGenericContainer {
+  elementName = "li";
+  class = classInfosPro;
+}
+LiScol : WOGenericContainer {
+  elementName = "li";
+  class = classInfosScol;
+}
+
+GoScol : WOHyperlink {
+  action = goInfosScol;
+	class = classInfosScol;
+}
+GoPerso : WOHyperlink {
+  action = goEtatCivil;
+	class = classEtatCivil;
+}
+
+GoProfessionnelles : WOHyperlink {
+  action = goInfosPro;
+	class = classInfosPro;
+}
+
+GoComptes : WOHyperlink {
+  action = goCompte;
+	class = classCompte;
+}
+
+LiComptes : WOGenericContainer {
+  elementName = "li";
+  class = classCompte;
+}
+
+HaveAdminRight : WOConditional {
+  condition = getPUser.haveAdminRight;
+}
+
+ImgSearch : WOImage {
+  alt = "Recherche";
+  border = 0;
+  src = "img/search.png";
+  align="absmiddle";
+}
+
+AulSearch : AjaxUpdateLink { 
+  action = openSearch; 
+  //onClick = "openAMD_amdSearch()";
+  //"openCAMD_amdSearch('Recherche ...');";
+  title = "Recherche...";
+  href = "javascript:void(0)";  
+}
+
+AmdSearch : AjaxModalDialog {
+  id = "amdSearch";
+  width = "800";
+  height = "450";
+  title = "Recherche ...";
+  showOpener = false;
+  centerVertically = true; 
+ // closeUpdateContainerID = "aucSearch";  
+  afterHide = "function(close){onCloseSearch();}";
+}
+
+PersonneSrch : PersonneSrch {
+  selectedPersonne = selectedSearchPersonne;
+  utilisateurPersId = getPUser.persId;
+  isReadOnly = true;  
+  showDetail = false;
+  showDetailInModalBox = true;
+  persTypeInterneExterne = searchTypeIntExt;//"interne";
+  persType = searchTypePhysMoral;//"individu";
+  updateContainerIDOnSelectionnerPersonneInTableview = aucselpersonneid;
+}
+
+AulSelectFromSearch : WOHyperlink {
+  action = selectFromSearch;
+  updateContainerID = "container";
+}
+
+
+AucSearch : AjaxUpdateContainer {
+  id = "aucSearch";
+}
+
+AucContent : AjaxUpdateContainer {
+  id = "container";
+}
+
+AulOnClose : AjaxUpdateLink {
+  updateContainerID = "aucSearch";//aucTriggerSearchId;
+  action = onCloseSearch;
+  functionName = "onCloseSearch";
+}
+
+IsInSearch : WOConditional {
+  condition = isInSearch;
+}
+
+AucTriggerSearch : AjaxUpdateContainer {
+	id = aucTriggerSearchId;
+}
+
+AutSearch : AjaxUpdateTrigger {
+	updateContainerIDs = lstRefreshSearchZones;
+}
+
+AucSelPersonne : AjaxUpdateContainer {
+  id = aucselpersonneid;
+  style = "text-align:center;";
+}
+
+IsSelPersonne : ERXNonNullConditional {
+  condition = selectedSearchPersonne;
+}
+
+NomSelPersonne : WOString {
+  value = selectedSearchPersonne.nomCompletAffichage;
+}
+
+IsIndividu : WOConditional {
+  condition = session.selectedPersonne.isIndividu;
+}
+
+IsInscrit: WOConditional {
+  condition = canShowScol;// session.lstInscDipl.@count;
+}
+
+DisplayInfosPro : WOConditional {
+  condition = session.displayInfosPro;
+}

@@ -1,0 +1,182 @@
+RepIcals : WORepetition {
+  list = lstIcals;
+  item = icalOccur;
+}
+
+TypeIcal : WOString {
+  value = icalOccur.icalType;
+}
+
+UrlIcal : WOString {
+  value = urlIcal;
+}
+
+CanEdit : WOConditional {
+  condition = canEditIcals;
+}
+
+IsDeleted : WOConditional {
+  condition = isDeleted;
+}
+
+IsNotDeleted : WOConditional {
+  condition = isDeleted;
+  negate = true;
+}
+ImgEdit : WOImage {
+  filename = "img/edit.png";
+  framework = "app";
+  border = 0;
+  style = "vertical-align:middle";
+  alt = "Modifier";
+}
+
+ImgDel : WOImage {
+  filename = "img/delete.png";
+  framework = "app";
+  border = 0;
+  style = "vertical-align:middle";
+  alt = "Supprimer";
+}
+
+ImgRestore : WOImage {
+  filename = "img/undo.png";
+  framework = "app";
+  border = 0;
+  style = "vertical-align:middle";
+  alt = "Restorer";
+}
+
+AulRestore : AjaxUpdateLink {
+  updateContainerID = icalsId;
+  action = restore;
+}
+
+AulEdit : AjaxUpdateLink {  
+  updateContainerID = icalsId;
+  action = editIcal;
+  onSuccess = onEditIcals;
+}
+
+AulDelete : AjaxUpdateLink {
+  updateContainerID = icalsId;
+  action = delete;
+}
+AucIcals : AjaxUpdateContainer {
+  id = icalsId;
+  
+}
+
+AmdEditIcal : AjaxModalDialog {
+  width = "750";
+	title = "Agenda Ical";
+	id = editIcalId;
+	showOpener = false;
+	button = true;
+	centerVertically = true;
+}
+
+frm : WOForm {
+  multipleSubmit = true;
+}
+
+rbtTypePro : WORadioButton {
+  name = "rbtType";
+  selection = editedIcal.icalType;
+  value = "PRO";
+  style = "border:0";
+}
+
+rbtTypePerso : WORadioButton {
+  name = "rbtType";
+  selection = editedIcal.icalType;
+  value = "PERSO";
+  style = "border:0";
+}
+Fichier : WOTextField {
+  value = editedIcal.icalName;
+  maxlength = "25";
+}
+Chemin : WOTextField {
+  value = editedIcal.icalLien;
+  maxlength = "200";
+  size = "90";
+}
+
+AsbValide : AjaxSubmitButton {
+  updateContainerID = aucTriggerIcalId;
+  action = valide;
+  value = "Valider";
+}
+AulCancel : AjaxUpdateLink {
+  updateContainerID = icalsId;
+  action = cancelChange;
+  onSuccess = "function(cancel){Modalbox.hide();}";
+  button = true;
+  value = "Fermer";
+}
+
+AucTriggerIcal : AjaxUpdateContainer {
+	id = aucTriggerIcalId;
+}
+
+AutIcal : AjaxUpdateTrigger {
+	updateContainerIDs = lstRefreshZones;
+}
+
+ErreurContainer : AjaxUpdateContainer {
+	id = erreurContainerid;
+	style = "z-index:9999;";
+}
+
+MessageUtil : MessageUtil {
+  idMessage = messageid;
+  idErreur = erreurContainerid;
+}
+
+ScriptClose : WOJavaScript {
+	scriptString = scriptCloseDialog;
+}
+
+tdIcal : WOGenericContainer {
+  elementName = "td";
+  class = classRow;
+  nowrap = "nowrap";
+}
+
+AulAjouter : AjaxUpdateLink {
+  updateContainerID = icalsId;
+  action = addIcal;
+  onSuccess = onEditIcals;
+  button = true;
+  value = "Ajouter un agenda";
+}
+
+AUCBtb : AjaxUpdateContainer {
+	id = btbId;
+	align = "right";
+}
+
+HaveChanges : WOConditional {
+  condition = haveChanges;
+}
+
+
+AulValideEdit : AjaxUpdateLink {
+  updateContainerID = aucTriggerIcalId;
+  action = saveDelete;
+  button = true;
+  value="Valider les suppressions ";
+}
+AulCancelEdit : AjaxUpdateLink {
+  updateContainerID = aucTriggerIcalId;
+  action = cancelDelete;
+  button = true;
+  value="Annuler les suppressions";
+}
+
+LinkIcals : WOHyperlink {
+  href = urlIcalEncoded;
+  target = "_black";
+  style ="font-weight:normal;";
+}

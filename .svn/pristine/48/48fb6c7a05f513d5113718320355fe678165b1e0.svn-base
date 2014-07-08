@@ -1,0 +1,69 @@
+Cadre : Wrapper {
+	titre = "Profiler";
+}
+
+IfUseCAS : WOConditional {
+	condition = useCAS;
+}
+
+NotUseCAS : WOConditional {
+	condition = useCAS;
+	negate = true;
+}
+
+goCas : WOHyperlink {
+	directActionName = "casLogin";
+}
+
+PwdLosted : WOHyperlink {
+	pageName = "ForgottenPassword";	
+}
+
+BlocageQuestionSecrete : WOConditional {
+	condition = accederSecretQuestionDisabled;
+}
+
+
+IsNotConnected : WOConditional {
+  condition = isConnected;
+  negate = true;
+}
+
+IsConnected : WOConditional {
+  condition = isConnected;
+}
+
+FormLogin : WOForm {
+	id = "FormLogin"; 
+	directActionName = "validerLogin";
+	multipleSubmit = true;
+}
+
+Login : WOTextField {
+	id = "LoginId";
+	name = "identifiant";
+	value = login;
+	// tabindex = "1";
+}
+MotDePasse : WOPasswordField {
+	name = "mot_de_passe";
+	value = password;
+	class = "alignToLeft";
+	// tabindex = "2";
+}
+
+Valider : WOSubmitButton {
+	value = "Se connecter";
+	directActionName = "validerLogin";
+}
+
+HasFicheProduit : WOConditional {
+	condition = hasFicheUtilisation;
+}
+
+FicheProduitLink : WOHyperlink {
+	id = "FicheProduitID";
+//	href = "http://www.asso-cocktail.fr/?q=fiche-produit/profiler-profil-utilisateur";
+	href = urlFicheProduit;
+}
+

@@ -1,0 +1,81 @@
+
+<WEBOBJECT NAME=ErreurIdentification>
+	<p align="center"><b><span style="color:#ff0000">Vous n'avez pas de note &agrave; consulter !</span></b></p>
+</WEBOBJECT>
+
+<WEBOBJECT NAME=IdentificationOK>
+
+<webobject name = "CanPrintCertif">
+	<webobject name = "LinkImprimer">Imprimer les certificats de scolarit&eacute;</webobject>
+</webobject> 
+
+	<p align="center"><b><span style="color:#ff0000">Sous r&eacute;serve de la d&eacute;lib&eacute;ration du jury d'examen et avec accord du Pr&eacute;sident du jury pour la publication &eacute;lectronique des notes.</span></b></p>
+
+	<b>Liste des dipl&ocirc;mes de <WEBOBJECT NAME=NomPrenom></WEBOBJECT> :</b>
+
+	<ul><WEBOBJECT NAME=RepetitionInsc>
+		<li><WEBOBJECT NAME=LienDiplome>
+			<WEBOBJECT NAME=FgraCode></WEBOBJECT><WEBOBJECT NAME=IdiplAnneeSuivie></WEBOBJECT>&nbsp;
+			<WEBOBJECT NAME=FdipAbreviation></WEBOBJECT>&nbsp;
+			<WEBOBJECT NAME=FspnLibelle></WEBOBJECT>&nbsp;
+			(<WEBOBJECT NAME=AnneeDip></WEBOBJECT>)
+		</WEBOBJECT></li>
+	</WEBOBJECT></ul>
+
+	<h1>
+</h1>
+<div class = "block" style = "width:100%;">
+	<div class = "boxTitre titreBlock" style = "width:99%;">
+      <span style = "margin-left:20px">
+  		Liste des Ec pour le dipl&ocirc;me : 
+		<WEBOBJECT NAME=FgraCodeSel></WEBOBJECT><WEBOBJECT NAME=IdiplAnneeSuivieSel></WEBOBJECT>&nbsp;
+		<WEBOBJECT NAME=FdipAbreviationSel></WEBOBJECT>&nbsp;
+		<WEBOBJECT NAME=FspnLibelleSel></WEBOBJECT>
+	  </span>
+	</div>
+	<table class = "table">
+		<tr  class="titre boxTitre">
+			<th class = "th">EC</th>
+			<webobject name = "AffichageOrigine">
+			<th class = "th">Semestre</th>
+			<th class = "th">Session</th>
+			<th class = "th">n&deg; &eacute;preuve</th>
+			<th class = "th">Coef</th>
+			</webobject>
+			<webobject name = "AffichageModulaire">
+			<th class = "th">N&deg; Sem.</th>
+			<th class = "th">Code EC</th>
+			<th class = "th">Coef EC</th>
+			</webobject>
+			<th class = "th">Note</th>
+		</tr>
+		<WEBOBJECT NAME=Repetition1>
+			<WEBOBJECT NAME=InscriptionsExam>
+				<tr class=<webobject name=AlternateColor></webobject>>
+					<td class = "td">
+						<b><WEBOBJECT NAME=NomEc></WEBOBJECT></b>
+						(<WEBOBJECT NAME=EeltCode></WEBOBJECT>)
+					</td>
+					<webobject name = "AffichageOrigine">
+					<td class = "td"><WEBOBJECT NAME=TypeSemestre></WEBOBJECT></td>
+					<td class = "td"><WEBOBJECT NAME=EentSession></WEBOBJECT></td>
+					<td class = "td"><WEBOBJECT NAME=EentEpreuve></WEBOBJECT></td>
+					<td class = "td"><WEBOBJECT NAME=EentCoefficient></WEBOBJECT></td>
+					</webobject>
+					<webobject name = "AffichageModulaire">
+					<td class = "td"><WEBOBJECT NAME=NumSemestre></WEBOBJECT></td>
+					<td class = "td"><WEBOBJECT NAME=EentCodeEC></WEBOBJECT></td>
+					<!--
+					<td class = "td"><webobject name = "LienVersSession"><WEBOBJECT NAME=EentCoefficientEC></WEBOBJECT></webobject></td>
+					-->
+					<td class = "td"><WEBOBJECT NAME=BtCoefficientEC></WEBOBJECT></td>
+					</webobject>
+					<td class = "td"><b><font color=<webobject name = CouleurNote/>>
+						<WEBOBJECT NAME=IeentNoteDefinitive/>/<WEBOBJECT NAME=EentNoteBase/></font></b>
+					</td>
+				</tr>
+			</WEBOBJECT>
+		</WEBOBJECT>
+	</table>
+	</div>
+</WEBOBJECT>

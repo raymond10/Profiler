@@ -1,0 +1,113 @@
+Titre : WOString {
+	value = titre;
+}
+
+CssCktlCommon : ERXStyleSheet {
+	filename = "css/CktlCommon.css";
+	framework = "FwkCktlThemes";	
+}
+
+CssCktlCommonCouleur : ERXStyleSheet {
+	//filename = "css/CktlCommonBleu.css";
+	filename = "css/CktlCommonOrange.css";
+	framework = "FwkCktlThemes";	
+}
+
+
+Body : WOBody {
+}
+
+Content : WOComponentContent {
+	
+}
+ErreurContainer : AjaxUpdateContainer {
+	id = "ErreurContainer";
+	style = "z-index:9999;";
+}
+
+UserFirstName : WOString {
+  value = cktlSession.connectedUserInfo.prenom;
+}
+
+UserName : WOString {
+  value = cktlSession.connectedUserInfo.nom;
+}
+
+IsConnected : WOConditional {
+  condition = isConnected;
+}
+
+
+
+CssProfil : ERXStyleSheet {
+	filename = "css/Profil.css";
+	framework = "app";
+}
+
+HasLogoURL : WOConditional {
+	condition = application.isMainLogoURLBlocked;
+	//condition = isMainLogoURLBlocked;
+}
+
+HasNoLogoURL : WOConditional {
+	condition = application.isMainLogoURLBlocked;
+	negate = true;
+}
+
+ImgLogo: WOImage {
+	alt = "Logo Universite";
+	src = application.mainLogoURL;
+}
+
+MessageUtil : MessageUtil {
+  idMessage = "idmessage";
+  idErreur = "ErreurContainer";
+}
+
+
+Copyright : WOString {
+	value = copyright;
+	escapeHTML = false;
+}
+Version : WOString {
+	value = version;
+	escapeHTML = false;
+}
+
+
+Base : WOString {
+  value = connectionBase;
+  escapeHTML = false;
+}
+
+Out : WOHyperlink {
+   action = killSession;   
+}
+
+ImgOut: WOImage {
+	alt = "Accueil";
+	filename = "img/exit.png";
+	framework = "app";
+	border = 0;
+	title = "Retour accueil";
+	align = "absmiddle";
+	height = "15";
+}
+
+ImgAdmin: WOImage {
+	alt = "Admin";
+	filename = "img/sisadmin.png";
+	framework = "app";
+	border = 0;
+	title = "Administrateur";
+	align = "absmiddle";
+	height = "15";
+}
+
+HaveAdminRight : WOConditional {
+  condition = session.pUser.haveAdminRight;
+}
+
+LimitationVisibiliteBase : WOConditional {
+	condition = hasDBViewDisabled;
+}

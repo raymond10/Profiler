@@ -1,0 +1,74 @@
+{
+    attributes = (
+        {
+            columnName = "FANN_COURANTE"; 
+            externalType = VARCHAR2; 
+            name = fannCourante; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 1; 
+        }, 
+        {
+            columnName = "FANN_DEBUT"; 
+            externalType = NUMBER; 
+            name = fannDebut; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "FANN_FIN"; 
+            externalType = NUMBER; 
+            name = fannFin; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = "FANN_KEY"; 
+            externalType = NUMBER; 
+            name = fannKey; 
+            precision = 4; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (fannKey, fannDebut, fannFin, fannCourante); 
+    className = "org.cocktail.profiler.server.eof.EOScolFormationAnnee"; 
+    classProperties = (
+        fannDebut, 
+        fannFin, 
+        fannCourante, 
+        scolMaquetteEcs, 
+        scolExamenEntetes, 
+        scolMaquetteEcLibres, 
+        fannKey
+    ); 
+    externalName = "SCOLARITE.SCOL_FORMATION_ANNEE"; 
+    fetchSpecificationDictionary = {}; 
+    name = ScolFormationAnnee; 
+    primaryKeyAttributes = (fannKey); 
+    relationships = (
+        {
+            destination = ScolExamenEntete; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fannKey; sourceAttribute = fannKey; }); 
+            name = scolExamenEntetes; 
+        }, 
+        {
+            destination = ScolMaquetteEcLibre; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fannKey; sourceAttribute = fannKey; }); 
+            name = scolMaquetteEcLibres; 
+        }, 
+        {
+            destination = ScolMaquetteEc; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = fannKey; sourceAttribute = fannKey; }); 
+            name = scolMaquetteEcs; 
+        }
+    ); 
+}

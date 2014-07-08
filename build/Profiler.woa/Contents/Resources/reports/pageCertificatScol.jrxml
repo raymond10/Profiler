@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pageCertificatScol" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/home/jluc/src/WO/Profiler/Resources/reports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="login" class="java.lang.String">
+		<defaultValueExpression><![CDATA["u1.a20802451"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT TRUNC(SYSDATE) AS DATA
+FROM DUAL]]>
+	</queryString>
+	<field name="DATA" class="java.sql.Timestamp"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band/>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="650">
+			<elementGroup>
+				<rectangle>
+					<reportElement key="rectangle-1" x="9" y="4" width="214" height="298"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Dashed"/>
+					</graphicElement>
+				</rectangle>
+				<subreport isUsingCache="true">
+					<reportElement key="subreport-5" mode="Opaque" x="10" y="6" width="212" height="294"/>
+					<subreportParameter name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="login">
+						<subreportParameterExpression><![CDATA[$P{login}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CERTIFICATsCOL.jasper"]]></subreportExpression>
+				</subreport>
+			</elementGroup>
+			<rectangle>
+				<reportElement key="rectangle-2" x="9" y="346" width="214" height="298"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-6" mode="Opaque" x="10" y="349" width="212" height="294"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="login">
+					<subreportParameterExpression><![CDATA[$P{login}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CERTIFICATsCOL.jasper"]]></subreportExpression>
+			</subreport>
+			<rectangle>
+				<reportElement key="rectangle-3" x="312" y="4" width="214" height="298"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-7" mode="Opaque" x="313" y="6" width="212" height="294"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="login">
+					<subreportParameterExpression><![CDATA[$P{login}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CERTIFICATsCOL.jasper"]]></subreportExpression>
+			</subreport>
+			<rectangle>
+				<reportElement key="rectangle-4" x="312" y="346" width="214" height="298"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</rectangle>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-8" mode="Opaque" x="313" y="349" width="212" height="294"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="login">
+					<subreportParameterExpression><![CDATA[$P{login}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CERTIFICATsCOL.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

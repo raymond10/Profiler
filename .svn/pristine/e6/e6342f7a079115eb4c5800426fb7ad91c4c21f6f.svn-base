@@ -1,0 +1,163 @@
+ErreurIdentification: WOConditional {
+	condition = erreurIdentification;
+}
+
+IdentificationOK: WOConditional {
+	condition = erreurIdentification;
+	negate = true;
+}
+
+LienDiplome: WOHyperlink {
+	action = selectionDiplome;
+	class = "linkPage";
+	title = "Voir les notes dans ce diplome";
+}
+
+RepetitionInsc: WORepetition {
+	item = itemInscription;
+	list = session.listeInscription;
+}
+
+FdipAbreviation: WOString {
+	value = itemInscription.fdipAbreviation;
+}
+
+FspnLibelle: WOString {
+	value = itemInscription.fspnLibelle;
+}
+
+FgraCode: WOString {
+	value = itemInscription.fgraCode;
+}
+
+AnneeDip: WOString {
+	value = itemInscription.fannKey;
+}
+
+AlternateColor: WOString {
+	value = backgroundColorForRow;
+}
+
+FgraCodeSel: WOString {
+	value = session.inscriptionSelected.fgraCode;
+}
+
+IdiplAnneeSuivieSel: WOString {
+	value = session.inscriptionSelected.idiplAnneeSuivie;
+}
+FdipAbreviationSel: WOString {
+	value = session.inscriptionSelected.fdipAbreviation;
+}
+FspnLibelleSel: WOString {
+	value = session.inscriptionSelected.fspnLibelle;
+}
+
+NomPrenom: WOString {
+	value = session.selectedPersonne.nomCompletAffichage;
+}
+
+IdiplAnneeSuivie: WOString {
+	value = itemInscription.idiplAnneeSuivie;
+}
+
+
+Repetition1: WORepetition {
+	item = itemListeInscriptionExam;
+	list = listeInscriptionExamen;
+}
+
+InscriptionsExam: WORepetition {
+	item = itemInscriptionExam;
+	list = itemListeInscriptionExam;
+	index = index;
+}
+
+IeentNoteDefinitive: WOString {
+	value = itemInscriptionExam.ieentNoteDefinitive;
+	valueWhenEmpty = "N.C.";
+}
+
+EentNoteBase: WOString {
+	value = itemInscriptionExam.toScolExamenEntete.eentNoteBase;
+}
+
+TypeSemestre: WOString {
+	value = typeSemestre;
+	valueWhenEmpty = "N.C.";
+}
+
+NumSemestre : WOString {
+	value = numeroSemestre;
+	valueWhenEmpty = "N.C.";
+}
+
+
+CouleurNote: WOString {
+	value = couleurNote;
+	valueWhenEmpty = "#000000";
+}
+
+EentEpreuve: WOString {
+	value = itemInscriptionExam.toScolExamenEntete.eentEpreuve;
+	valueWhenEmpty = "N.C.";
+}
+
+//EentLibelle: WOString {
+//	value = itemInscriptionExam.toScolExamenEntete.eentLibelle;
+//	valueWhenEmpty = "N.C.";
+//}
+
+EeltCode: WOString {
+	value = itemInscriptionExam.toScolExamenEntete.eeltCode;
+}
+
+EentSession: WOString {
+	value = itemInscriptionExam.toScolExamenEntete.eentSession;
+	valueWhenEmpty = "N.C.";
+}
+
+EentCodeEC : WOString {
+	value = codeEcItem;
+	valueWhenEmpty = "N.C.";
+}
+
+NomEc: WOString {
+	value = nomEcItem;
+}
+
+EentCoefficient: WOString {
+	value = itemInscriptionExam.toScolExamenEntete.eentCoefficient;
+}
+
+LienVersSession : WOHyperlink {
+	action = affichageMecSession;
+}
+
+EentCoefficientEC : WOString {
+	value = coeffEcItem;
+}
+
+BtCoefficientEC : CktlAjaxButton {
+	onClick = affichageMecSession;
+	title = "Coefficient de l'EC";
+	text = coeffEcItem;
+}
+
+CanPrintCertif: WOConditional {
+	condition = canPrintCertif;
+}
+
+LinkImprimer : WOHyperlink {
+	action = onImprimer;
+	target = "_blank";
+}
+
+AffichageOrigine : WOConditional {
+	condition = isScolariteDisplayCustomed;
+	negate = true;
+}
+
+AffichageModulaire : WOConditional {
+	condition = isScolariteDisplayCustomed;
+}
+

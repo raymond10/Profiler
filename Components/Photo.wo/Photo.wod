@@ -1,0 +1,142 @@
+Photo : WOImage {
+  data = getPhotoDatas;
+  mimeType = "image/jpg";
+  border =1; 
+  align = "center";
+  height = heightPhoto;
+  style = "margin:3px 10px;";
+}
+
+NonNull : ERXNonNullConditional {
+  condition = getPhotoDatas;
+}
+
+ELse : ERXElse {
+}
+
+NoPhoto : WOImage {
+  filename = "img/nophoto.jpg";
+}
+
+CanChangePhoto : WOConditional {
+  condition = canChangePhoto;
+}
+Frm : WOForm {
+  multipleSubmit = true;
+  enctype = "multipart/form-data";
+}
+Upload: WOFileUpload {
+    data = datasUploaded;
+    filePath = photoFileName;
+    size = "40";
+    mimeType = photoMimeType;
+}
+
+//Upload : AjaxFileUpload {
+//	startingText = "Chargement de la photo";
+//	succeededAction = validPhoto;
+//	data = datasUploaded;
+//	progressBarBeforeStart = true;
+//	uploadLabel = "Choisir la photo";
+//	progressBarAfterDone = true;
+//	filePath = photoFileName;
+//	mimeType = photoMimeType;
+//}
+
+SbValide : WOSubmitButton {
+ // updateContainerID = aucPhotoId;
+  action = validPhoto;
+  value = "Valider";
+}
+AsbDelete : AjaxUpdateLink {
+  updateContainerID = aucPhotoId;
+  action = deletePhoto;
+  value = "Supprimer la photo";
+  button = true;
+  onClickBefore = "confirm('Souhaitez-vous reelement supprimer la photo ?')";
+}
+
+AucPhoto : AjaxUpdateContainer {
+  id = aucPhotoId;
+}
+
+
+AulChangePhoto : AjaxUpdateLink {
+  updateContainerID = AulChangementId;
+  onSuccess = onClickChangePhoto;
+  button = true;
+  value = "Modifier la photo";
+ // action = iniPhotoChange;
+  
+}
+
+AmdChangePhoto : AjaxModalDialog {
+	width = "480";
+	title = "Changement de la photo";
+	id = changePhotoId;
+	showOpener = false;
+	label = "Changer la photo";
+	button = true;
+	centerVertically = true;
+}
+
+AulChangement : AjaxUpdateContainer {
+  id = AulChangementId;
+}
+
+CanDeletePhoto : WOConditional {
+  condition = canDeletePhoto;
+}
+
+ErreurContainer : AjaxUpdateContainer {
+	id = erreurContainerid;
+	style = "z-index:9999;";
+}
+
+MessageUtil : MessageUtil {
+  idMessage = messageid;
+  idErreur = erreurContainerid;
+}
+
+
+DateModifPhoto : WOString {
+  value = dateModifPhoto;
+  dateformat = "%d/%m/%Y";
+}
+
+IsPublic : ERXEqualConditional {
+  value1 = getEditedIndividu.indPhoto;
+  value2 = "O";
+}
+
+ImgPublic : WOImage {
+  alt = "Publique";
+  border = 0;
+  src = "img/button_ok.png";
+  align="absmiddle";
+}
+ImgPrivate : WOImage {
+  alt = "Privée";
+  border = 0;
+  src = "img/button_cance.png";
+  align="absmiddle";
+}
+
+Else : ERXElse {
+}
+
+rbtPhotoPublic : WORadioButton {
+  selection = getEditedIndividu.indPhoto;
+  value = "O";
+  style = "border:0";
+  name = "rbtPhoto";
+  id = "rbtPhotoPublic";
+}
+
+rbtPhotoPrive : WORadioButton {
+  selection = getEditedIndividu.indPhoto;
+  value = "N";
+  style = "border:0";
+  name = "rbtPhoto";
+  id = "rbtPhotoPrive";
+}

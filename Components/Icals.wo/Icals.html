@@ -1,0 +1,78 @@
+<div class = "block" style = "margin-top:10px;">
+  <div class = "boxTitre titreBlock" style = "width:99%;">
+    <span style = "margin-left:20px">Agendas publics</span>
+  </div>
+  <div class = "subBox corpsBlock">
+    <webobject name = "AucIcals">
+      <table width = "97%" cellspacing = "0" cellpadding = "0" border = "0" class="table">
+        <tr class = "boxTitre">
+          <th class="th">Type</th>
+          <th class="th">Fichier ical</th>
+          <th width = "60" class="th">Action</th>
+        </tr>
+        <tbody>
+        <webobject name = "RepIcals">
+          <tr>
+            <webobject name = "tdIcal"><webobject name = "TypeIcal" /></webobject>
+            <webobject name = "tdIcal">
+            <div style = "width:360px;overflow:auto;margin:0 auto;">
+              <webobject name = "LinkIcals"><webobject name = "UrlIcal" /></webobject>              
+              </div>
+            </webobject>
+            <td align = "center" style = "border-left:1px solid black;">
+              <webobject name = "CanEdit">
+                <webobject name = "IsDeleted">
+                  <webobject name = "AulRestore"><webobject name = "ImgRestore" /></webobject>
+                </webobject>
+                <webobject name = "IsNotDeleted">
+                  <webobject name = "AulEdit"><webobject name = "ImgEdit" /></webobject>
+                  <webobject name = "AulDelete"><webobject name = "ImgDel" /></webobject>
+                </webobject>
+              </webobject>
+            </td>
+          </tr>
+        </webobject>
+        </tbody>
+      </table>
+      <webobject name = "AUCBtb">
+        <webobject name = "CanEdit"> <webobject name = "AulAjouter" /></webobject>
+        <webobject name = "HaveChanges">
+          <br />
+          <webobject name = "AulValideEdit" />&nbsp;&nbsp;<webobject name = "AulCancelEdit" />
+        </webobject>
+      </webobject>
+      <webobject name = "AmdEditIcal">
+        <webobject name = "ErreurContainer">
+          <webobject name = "MessageUtil" />
+          <webobject name = "ScriptClose" />
+        </webobject>
+        <webobject name = "frm">
+          <table style = "margin:0 auto;">
+            <tr>
+              <th style = "text-align:right;">Type :</th>
+              <td>
+                <webobject name = "rbtTypePro" />&nbsp;PRO&nbsp;&nbsp;&nbsp;<webobject name = "rbtTypePerso" />PERSO</td>
+            </tr>
+            <tr>
+              <th style = "text-align:right;">Fichier ical : </th>
+              <td>
+                <webobject name = "Fichier" />
+                <i style = "font-size:smaller;">ex:agenda.ics</i>
+              </td>
+            </tr>
+            <tr>
+              <th style = "text-align:right;">Chemin :</th>
+              <td><webobject name = "Chemin" /></td>
+            </tr>
+            <tr>
+              <td colspan = "2" style = "text-align:right;padding-right:5px;">
+                <webobject name = "AsbValide" />&nbsp;&nbsp;<webobject name = "AulCancel" />
+              </td>
+            </tr>
+          </table>
+        </webobject>
+      </webobject>
+    </webobject>
+    <webobject name = "AucTriggerIcal"><webobject name = "AutIcal" /></webobject>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class = "block" style = "width:500px;">
+  <div class = "boxTitre titreBlock" style = "width:99%;">
+    <span style = "margin-left:20px">Comptes informatiques</span>
+  </div>
+  <div class = "subBox corpsBlock">
+    <webobject name = "Compte" />
+    <webobject name = "BlocageChangePwd">
+    	<webobject name = "CanChangePwd"> <webobject name = "AulChnagePwd" /> </webobject>
+    </webobject>
+    <webobject name = "AucChangePwd">
+      <webobject name = "AmdChangePwd">
+        <webobject name = "IsInChange">
+          <webobject name = "CanChangePwd">
+            <webobject name = "ErreurContainer">
+              <webobject name = "MessageUtil" />
+              <webobject name = "ScriptClose" />
+            </webobject>
+            <webobject name = "AucFrm">
+              <webobject name = "PwdChanged">
+                <webobject name = "Frm">
+                  <table style = "margin:0 auto;">
+                    <tr>
+                      <th style = "text-align:right;">Login : </th>
+                      <td><webobject name = "Login" /></td>
+                    </tr>
+                    <tr>
+                      <th style = "text-align:right;">Nouveau Mot de passe : </th>
+                      <td><webobject name = "NewPwd" /></td>
+                    </tr>
+                    <tr>
+                      <th style = "text-align:right;">Confirmation du mot de passe : </th>
+                      <td><webobject name = "NewPwd2" /></td>
+                    </tr>
+                    <webobject name = "HaveDefaultPwd">
+                      <tr>
+                        <td colspan = "2" align = "center">
+                          <b>R&eacute;initialiser avec le mot de passe par d&eacute;faut :</b>
+                          <br />
+                          <webobject name = "LibelleDefaultPassword" />
+                          <br />
+                          <webobject name = "AulInitPassword" />
+                        </td>
+                      </tr>
+                    </webobject>
+                    <tr>
+                      <td colspan = "2" style = "text-align:right;padding-right:5px;">
+                        <webobject name = "AsbValide" />&nbsp;&nbsp;<webobject name = "AulCancel" />
+                      </td>
+                    </tr>
+                  </table>
+                </webobject>
+              </webobject>
+              <webobject name = "Else">
+                <div align = "center"> <webobject name = "AulCancel" /></div>
+              </webobject>
+            </webobject>
+            <webobject name = "AucTriggerPwd"><webobject name = "AutPwd" /></webobject>
+          </webobject>
+          <webobject name = "Else">
+            <div class = "warning">Vous n'avez pas les droits n&eacute;cessaires pour changer ce mot de passe !! </div>
+            <div align = "right"> <webobject name = "AulCancel" /> </div>
+          </webobject>
+        </webobject>
+      </webobject>
+    </webobject>
+  </div>
+</div>

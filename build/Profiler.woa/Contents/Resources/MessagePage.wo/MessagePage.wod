@@ -1,0 +1,8 @@
+Cadre : Wrapper {
+	titre = "Profiler";
+	showMenu = showMenu;
+}
+
+Message : WOString {
+  value = message;
+}

@@ -1,0 +1,53 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {URL = ""; password = ""; username = ""; }; 
+    entities = (
+        {
+            className = "org.cocktail.profiler.server.eof.EOHistorique"; 
+            name = Historique; 
+        }, 
+        {className = "org.cocktail.profiler.server.eof.EOInscDipl"; name = InscDipl; }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolExamenEntete"; 
+            name = ScolExamenEntete; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolFormationAnnee"; 
+            name = ScolFormationAnnee; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolFormationDiplome"; 
+            name = ScolFormationDiplome; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolFormationGrade"; 
+            name = ScolFormationGrade; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolFormationSpecialisation"; 
+            name = ScolFormationSpecialisation; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolInscriptionEtudiant"; 
+            name = ScolInscriptionEtudiant; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolInscriptionExamen"; 
+            name = ScolInscriptionExamen; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolMaquetteEc"; 
+            name = ScolMaquetteEc; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolMaquetteEcLibre"; 
+            name = ScolMaquetteEcLibre; 
+        }, 
+        {
+            className = "org.cocktail.profiler.server.eof.EOScolMaquetteRepartitionEc"; 
+            name = ScolMaquetteRepartitionEc; 
+        }
+    ); 
+    userInfo = {"_EntityModeler" = {reverseEngineered = Y; }; modelId = GRHUM; }; 
+}

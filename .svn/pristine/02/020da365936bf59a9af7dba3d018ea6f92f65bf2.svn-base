@@ -1,0 +1,91 @@
+AdrsZone : AdrsZone {
+  editedPersonne = editedPersonne;
+//  ec = getEc;
+  ec = ec;
+  utilisateurPersId = getPuser.persId;
+}
+
+TelZone : TelZone {
+  editedPersonne = editedPersonne;
+//  ec = getEc;
+  ec = ec;
+  utilisateurPersId = getPuser.persId;
+}
+
+IsLocated : WOConditional {
+        condition = isLocated;
+}
+
+LocalZone : LocalZone {
+	personne = editedPersonne;
+	editingContext = ec;
+	utilisateurPersId = getPuser.persId;
+}
+
+IsPhotoEnable : WOConditional {
+	condition = application.isPhotoEnabled;
+	//condition = true;
+}
+
+AccessPhoto : WOConditional {
+	condition = isIndividuWithPhoto;
+	//condition = true;
+}
+
+else : WOConditional {
+	condition = isIndividuWithPhoto;
+	negate = true;
+}
+
+
+Photo : CktlAjaxIndividuPhotoSelect {
+//	editingContext = getEc;
+	editingContext = ec;
+	individu = editedPersonne;
+	utilisateurPersId = puser.persId;
+	isReadOnly = isPhotoReadOnlyEnabled;
+}
+
+IsIndividu : WOConditional {
+//  condition = editedPersonne.isIndividu;
+	condition = isEditedPersonne;
+}
+
+
+IcalsZone : IcalsZone {
+	editedPersonne = editedPersonne;
+//	ec = getEc;
+	ec = ec;
+	utilisateurPersId = puser.persId;
+}
+
+AucInfosPerso : AjaxUpdateContainer {
+	id = "AucInfosPerso";
+}
+
+BtValideInfosPerso : CktlAjaxSubmitButton {
+	name = "ValideEdit";
+	action = save;
+	title = "Enregistrer";
+	text = "Enregistrer";
+	type = "validate";
+	enabled = true;
+	updateContainerID = "AucInfosPerso";
+	showBusyImage = true;
+}
+
+BtCancelInfosPerso : CktlAjaxButton {
+	action = cancelEdit;
+	title = "Annuler";
+	text = "Annuler";
+	type = "cancel";
+	enabled = true;
+	updateContainerID = "AucInfosPerso";
+	onClickBefore = "confirm('Souhaitez-vous réellement annuler les modifications faites sur les informations personnelles ?')";
+	showBusyImage = true;
+}
+
+InfosPersoForm : ERXWOForm {
+	multipleSubmit = true;
+	embedded = true;
+}
